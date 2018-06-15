@@ -1,16 +1,18 @@
 webpackJsonp([97],{
 
-/***/ 1736:
+/***/ 1789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonMessageOutputAirnotifierDevicesPageModule", function() { return AddonMessageOutputAirnotifierDevicesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignSubmissionReviewPageModule", function() { return AddonModAssignSubmissionReviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devices__ = __webpack_require__(1852);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(927);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__submission_review__ = __webpack_require__(1909);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,37 +37,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonMessageOutputAirnotifierDevicesPageModule = (function () {
-    function AddonMessageOutputAirnotifierDevicesPageModule() {
+
+
+var AddonModAssignSubmissionReviewPageModule = /** @class */ (function () {
+    function AddonModAssignSubmissionReviewPageModule() {
     }
-    AddonMessageOutputAirnotifierDevicesPageModule = __decorate([
+    AddonModAssignSubmissionReviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */],
+                __WEBPACK_IMPORTED_MODULE_6__submission_review__["a" /* AddonModAssignSubmissionReviewPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModAssignComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__submission_review__["a" /* AddonModAssignSubmissionReviewPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonMessageOutputAirnotifierDevicesPageModule);
-    return AddonMessageOutputAirnotifierDevicesPageModule;
+    ], AddonModAssignSubmissionReviewPageModule);
+    return AddonModAssignSubmissionReviewPageModule;
 }());
 
-//# sourceMappingURL=devices.module.js.map
+//# sourceMappingURL=submission-review.module.js.map
 
 /***/ }),
 
-/***/ 1852:
+/***/ 1909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessageOutputAirnotifierDevicesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignSubmissionReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_course_providers_course__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_assign__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_submission_submission__ = __webpack_require__(399);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,121 +100,130 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays the list of devices.
+ * Page that displays a submission.
  */
-var AddonMessageOutputAirnotifierDevicesPage = (function () {
-    function AddonMessageOutputAirnotifierDevicesPage(domUtils, airnotifierProivder, pushNotificationsProvider) {
-        this.domUtils = domUtils;
-        this.airnotifierProivder = airnotifierProivder;
-        this.pushNotificationsProvider = pushNotificationsProvider;
-        this.devices = [];
-        this.devicesLoaded = false;
+var AddonModAssignSubmissionReviewPage = /** @class */ (function () {
+    function AddonModAssignSubmissionReviewPage(navParams, navCtrl, courseProvider, appProvider, assignProvider) {
+        this.navCtrl = navCtrl;
+        this.courseProvider = courseProvider;
+        this.appProvider = appProvider;
+        this.assignProvider = assignProvider;
+        this.forceLeave = false; // To allow leaving the page without checking for changes.
+        this.moduleId = navParams.get('moduleId');
+        this.courseId = navParams.get('courseId');
+        this.submitId = navParams.get('submitId');
+        this.blindId = navParams.get('blindId');
+        this.showGrade = !!navParams.get('showGrade');
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.ionViewDidLoad = function () {
-        this.fetchDevices();
+    AddonModAssignSubmissionReviewPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.fetchSubmission().finally(function () {
+            _this.loaded = true;
+        });
     };
     /**
-     * Fetches the list of devices.
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModAssignSubmissionReviewPage.prototype.ionViewCanLeave = function () {
+        if (!this.submissionComponent || this.forceLeave) {
+            return true;
+        }
+        // Check if data has changed.
+        return this.submissionComponent.canLeave();
+    };
+    /**
+     * Get the submission.
      *
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.fetchDevices = function () {
+    AddonModAssignSubmissionReviewPage.prototype.fetchSubmission = function () {
         var _this = this;
-        return this.airnotifierProivder.getUserDevices().then(function (devices) {
-            var pushId = _this.pushNotificationsProvider.getPushId();
-            // Convert enabled to boolean and search current device.
-            devices.forEach(function (device) {
-                device.enable = !!device.enable;
-                device.current = pushId && pushId == device.pushid;
+        return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assignment) {
+            _this.assign = assignment;
+            _this.title = _this.assign.name;
+            _this.blindMarking = _this.assign.blindmarking && !_this.assign.revealidentities;
+            return _this.courseProvider.getModuleBasicGradeInfo(_this.moduleId).then(function (gradeInfo) {
+                if (gradeInfo) {
+                    // Grades can be saved if simple grading.
+                    if (gradeInfo.advancedgrading && gradeInfo.advancedgrading[0] &&
+                        typeof gradeInfo.advancedgrading[0].method != 'undefined') {
+                        var method = gradeInfo.advancedgrading[0].method || 'simple';
+                        _this.canSaveGrades = method == 'simple';
+                    }
+                    else {
+                        _this.canSaveGrades = true;
+                    }
+                }
             });
-            _this.devices = devices;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModal(message);
-        }).finally(function () {
-            _this.devicesLoaded = true;
         });
     };
     /**
-     * Update list of devices after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
+     * Refresh all the data.
+     *
+     * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevicesAfterDelay = function () {
+    AddonModAssignSubmissionReviewPage.prototype.refreshAllData = function () {
         var _this = this;
-        // Cancel pending updates.
-        if (this.updateTimeout) {
-            clearTimeout(this.updateTimeout);
+        var promises = [];
+        promises.push(this.assignProvider.invalidateAssignmentData(this.courseId));
+        if (this.assign) {
+            promises.push(this.assignProvider.invalidateSubmissionData(this.assign.id));
+            promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
+            promises.push(this.assignProvider.invalidateSubmissionStatusData(this.assign.id, this.submitId, this.blindMarking));
         }
-        this.updateTimeout = setTimeout(function () {
-            _this.updateTimeout = null;
-            _this.updateDevices();
-        }, 5000);
-    };
-    /**
-     * Fetch devices. The purpose is to store the updated data, it won't be reflected in the view.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevices = function () {
-        var _this = this;
-        this.airnotifierProivder.invalidateUserDevices().finally(function () {
-            _this.airnotifierProivder.getUserDevices();
+        return Promise.all(promises).finally(function () {
+            _this.submissionComponent && _this.submissionComponent.invalidateAndRefresh();
+            return _this.fetchSubmission();
         });
     };
     /**
-     * Refresh the list of devices.
+     * Refresh the data.
      *
      * @param {any} refresher Refresher.
      */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.refreshDevices = function (refresher) {
+    AddonModAssignSubmissionReviewPage.prototype.refreshSubmission = function (refresher) {
+        this.refreshAllData().finally(function () {
+            refresher.complete();
+        });
+    };
+    /**
+     * Submit a grade and feedback.
+     */
+    AddonModAssignSubmissionReviewPage.prototype.submitGrade = function () {
         var _this = this;
-        this.airnotifierProivder.invalidateUserDevices().finally(function () {
-            _this.fetchDevices().finally(function () {
-                refresher.complete();
+        if (this.submissionComponent) {
+            this.submissionComponent.submitGrade().then(function () {
+                // Grade submitted, leave the view if not in tablet.
+                if (!_this.appProvider.isWide()) {
+                    _this.forceLeave = true;
+                    _this.navCtrl.pop();
+                }
             });
-        });
-    };
-    /**
-     * Enable or disable a certain device.
-     *
-     * @param {any} device The device object.
-     * @param {boolean} enable True to enable the device, false to disable it.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.enableDevice = function (device, enable) {
-        var _this = this;
-        device.updating = true;
-        this.airnotifierProivder.enableDevice(device.id, enable).then(function () {
-            // Update the list of devices since it was modified.
-            _this.updateDevicesAfterDelay();
-        }).catch(function (message) {
-            // Show error and revert change.
-            _this.domUtils.showErrorModal(message);
-            device.enable = !device.enable;
-        }).finally(function () {
-            device.updating = false;
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.ngOnDestroy = function () {
-        // If there is a pending action to update devices, execute it right now.
-        if (this.updateTimeout) {
-            clearTimeout(this.updateTimeout);
-            this.updateDevices();
         }
     };
-    AddonMessageOutputAirnotifierDevicesPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_5__components_submission_submission__["a" /* AddonModAssignSubmissionComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_5__components_submission_submission__["a" /* AddonModAssignSubmissionComponent */])
+    ], AddonModAssignSubmissionReviewPage.prototype, "submissionComponent", void 0);
+    AddonModAssignSubmissionReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-message-output-airnotifier-devices',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.messageoutput_airnotifier.processorsettingsdesc\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="devicesLoaded" (ionRefresh)="refreshDevices($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="devicesLoaded">\n        <ion-list>\n            <ion-item text-wrap *ngFor="let device of devices">\n                <ion-label [class.core-bold]="device.current">\n                    {{ device.model }}\n                    <span *ngIf="device.current">({{ \'core.currentdevice\' | translate }})</span>\n                </ion-label>\n                <ion-spinner *ngIf="device.updating" item-end></ion-spinner>\n                <ion-toggle [disabled]="device.updating" [(ngModel)]="device.enable" (ngModelChange)="enableDevice(device, device.enable)"></ion-toggle>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/,
+            selector: 'page-addon-mod-assign-submission-review',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-review/submission-review.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n\n    <core-navbar-buttons end>\n        <button [hidden]="!canSaveGrades" ion-button button-clear (click)="submitGrade()" [attr.aria-label]="\'core.done\' | translate">\n            {{ \'core.done\' | translate }}\n        </button>\n    </core-navbar-buttons>\n</ion-header>\n<ion-content>\n\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshSubmission($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <addon-mod-assign-submission [courseId]="courseId" [moduleId]="moduleId" [submitId]="submitId" [blindId]="blindId" [showGrade]="showGrade"></addon-mod-assign-submission>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-review/submission-review.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__["a" /* AddonMessageOutputAirnotifierProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__["a" /* AddonPushNotificationsProvider */]])
-    ], AddonMessageOutputAirnotifierDevicesPage);
-    return AddonMessageOutputAirnotifierDevicesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__core_course_providers_course__["a" /* CoreCourseProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_assign__["a" /* AddonModAssignProvider */]])
+    ], AddonModAssignSubmissionReviewPage);
+    return AddonModAssignSubmissionReviewPage;
 }());
 
-//# sourceMappingURL=devices.js.map
+//# sourceMappingURL=submission-review.js.map
 
 /***/ })
 

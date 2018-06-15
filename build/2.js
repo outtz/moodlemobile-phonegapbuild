@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1788:
+/***/ 1838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11,9 +11,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1906);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__list__ = __webpack_require__(1908);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1961);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__list__ = __webpack_require__(1963);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -41,7 +41,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonNotificationsListPageModule = (function () {
+var AddonNotificationsListPageModule = /** @class */ (function () {
     function AddonNotificationsListPageModule() {
     }
     AddonNotificationsListPageModule = __decorate([
@@ -66,7 +66,7 @@ var AddonNotificationsListPageModule = (function () {
 
 /***/ }),
 
-/***/ 1906:
+/***/ 1961:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,7 +75,7 @@ var AddonNotificationsListPageModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_actions__ = __webpack_require__(1907);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_actions__ = __webpack_require__(1962);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,7 +100,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonNotificationsComponentsModule = (function () {
+var AddonNotificationsComponentsModule = /** @class */ (function () {
     function AddonNotificationsComponentsModule() {
     }
     AddonNotificationsComponentsModule = __decorate([
@@ -126,7 +126,7 @@ var AddonNotificationsComponentsModule = (function () {
 
 /***/ }),
 
-/***/ 1907:
+/***/ 1962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -160,7 +160,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Component that displays the actions for a notification.
  */
-var AddonNotificationsActionsComponent = (function () {
+var AddonNotificationsActionsComponent = /** @class */ (function () {
     function AddonNotificationsActionsComponent(contentLinksDelegate) {
         this.contentLinksDelegate = contentLinksDelegate;
         this.actions = [];
@@ -184,7 +184,7 @@ var AddonNotificationsActionsComponent = (function () {
     ], AddonNotificationsActionsComponent.prototype, "courseId", void 0);
     AddonNotificationsActionsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'addon-notifications-actions',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/notifications/components/actions/actions.html"*/'<ion-row *ngIf="actions && actions.length > 0">\n    <ion-col *ngFor="let action of actions">\n        <button ion-button icon-left clear small (click)="action.action()">\n            <ion-icon name="{{action.icon}}"></ion-icon>\n            {{ action.message | translate }}\n        </button>\n    </ion-col>\n</ion-row>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/notifications/components/actions/actions.html"*/,
+            selector: 'addon-notifications-actions',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/notifications/components/actions/addon-notifications-actions.html"*/'<ion-row *ngIf="actions && actions.length > 0">\n    <ion-col *ngFor="let action of actions">\n        <button ion-button icon-left clear small (click)="action.action()">\n            <ion-icon name="{{action.icon}}"></ion-icon>\n            {{ action.message | translate }}\n        </button>\n    </ion-col>\n</ion-row>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/notifications/components/actions/addon-notifications-actions.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__core_contentlinks_providers_delegate__["a" /* CoreContentLinksDelegate */]])
     ], AddonNotificationsActionsComponent);
@@ -195,7 +195,7 @@ var AddonNotificationsActionsComponent = (function () {
 
 /***/ }),
 
-/***/ 1908:
+/***/ 1963:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -207,8 +207,8 @@ var AddonNotificationsActionsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_notifications__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addon_pushnotifications_providers_delegate__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_notifications__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addon_pushnotifications_providers_delegate__ = __webpack_require__(147);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -243,7 +243,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Page that displays the list of notifications.
  */
-var AddonNotificationsListPage = (function () {
+var AddonNotificationsListPage = /** @class */ (function () {
     function AddonNotificationsListPage(navParams, domUtils, eventsProvider, sitesProvider, textUtils, utils, notificationsProvider, pushNotificationsDelegate) {
         this.domUtils = domUtils;
         this.eventsProvider = eventsProvider;

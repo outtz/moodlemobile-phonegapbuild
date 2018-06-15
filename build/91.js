@@ -1,18 +1,20 @@
 webpackJsonp([91],{
 
-/***/ 1747:
+/***/ 1795:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatUsersPageModule", function() { return AddonModChatUsersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModDataEditPageModule", function() { return AddonModDataEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users__ = __webpack_require__(1863);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__edit__ = __webpack_require__(1915);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,42 +41,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModChatUsersPageModule = (function () {
-    function AddonModChatUsersPageModule() {
+
+
+var AddonModDataEditPageModule = /** @class */ (function () {
+    function AddonModDataEditPageModule() {
     }
-    AddonModChatUsersPageModule = __decorate([
+    AddonModDataEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */],
+                __WEBPACK_IMPORTED_MODULE_8__edit__["a" /* AddonModDataEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_7__components_components_module__["a" /* AddonModDataComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__["a" /* CoreCompileHtmlComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__["a" /* CoreCommentsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_8__edit__["a" /* AddonModDataEditPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModChatUsersPageModule);
-    return AddonModChatUsersPageModule;
+    ], AddonModDataEditPageModule);
+    return AddonModDataEditPageModule;
 }());
 
-//# sourceMappingURL=users.module.js.map
+//# sourceMappingURL=edit.module.js.map
 
 /***/ }),
 
-/***/ 1863:
+/***/ 1915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatUsersPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModDataEditPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_chat__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_utils__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_groups__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_data__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_helper__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_offline__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fields_delegate__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_components_module__ = __webpack_require__(388);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -104,79 +119,300 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
+
+
 /**
- * Page that displays the chat session users.
+ * Page that displays the view edit page.
  */
-var AddonModChatUsersPage = (function () {
-    function AddonModChatUsersPage(navParams, network, appProvider, sitesProvider, viewCtrl, domUtils, chatProvider) {
-        var _this = this;
-        this.appProvider = appProvider;
-        this.sitesProvider = sitesProvider;
-        this.viewCtrl = viewCtrl;
+var AddonModDataEditPage = /** @class */ (function () {
+    function AddonModDataEditPage(params, utils, groupsProvider, domUtils, fieldsDelegate, courseProvider, dataProvider, dataOffline, dataHelper, sitesProvider, navCtrl, translate, eventsProvider, fileUploaderProvider) {
+        this.utils = utils;
+        this.groupsProvider = groupsProvider;
         this.domUtils = domUtils;
-        this.chatProvider = chatProvider;
-        this.users = [];
-        this.usersLoaded = false;
-        this.sessionId = navParams.get('sessionId');
-        this.isOnline = this.appProvider.isOnline();
-        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
-        this.onlineObserver = network.onchange().subscribe(function (online) {
-            _this.isOnline = _this.appProvider.isOnline();
-        });
+        this.fieldsDelegate = fieldsDelegate;
+        this.courseProvider = courseProvider;
+        this.dataProvider = dataProvider;
+        this.dataOffline = dataOffline;
+        this.dataHelper = dataHelper;
+        this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.eventsProvider = eventsProvider;
+        this.fileUploaderProvider = fileUploaderProvider;
+        this.offlineActions = [];
+        this.fields = {};
+        this.fieldsArray = [];
+        this.forceLeave = false; // To allow leaving the page without checking for changes.
+        this.title = '';
+        this.component = __WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */].COMPONENT;
+        this.loaded = false;
+        this.selectedGroup = 0;
+        this.cssClass = '';
+        this.cssTemplate = '';
+        this.editFormRender = '';
+        this.extraImports = [__WEBPACK_IMPORTED_MODULE_15__components_components_module__["a" /* AddonModDataComponentsModule */]];
+        this.errors = {};
+        this.module = params.get('module') || {};
+        this.entryId = params.get('entryId') || null;
+        this.courseId = params.get('courseId');
+        this.selectedGroup = params.get('group') || 0;
+        this.siteId = sitesProvider.getCurrentSiteId();
+        this.title = this.module.name;
+        this.editForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormGroup */]({});
     }
     /**
      * View loaded.
      */
-    AddonModChatUsersPage.prototype.ionViewDidLoad = function () {
+    AddonModDataEditPage.prototype.ionViewDidLoad = function () {
+        this.fetchEntryData();
+    };
+    /**
+     * Check if we can leave the page or not and ask to confirm the lost of data.
+     *
+     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModDataEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;
-        this.chatProvider.getChatUsers(this.sessionId).then(function (data) {
-            _this.users = data.users;
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilegettingchatusers', true);
-        }).finally(function () {
-            _this.usersLoaded = true;
+        if (this.forceLeave) {
+            return true;
+        }
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
+                return Promise.resolve();
+            }
+            // Show confirmation if some data has been modified.
+            return _this.domUtils.showConfirm(_this.translate.instant('core.confirmcanceledit'));
+        }).then(function () {
+            // Delete the local files from the tmp folder.
+            return _this.dataHelper.getEditTmpFiles(inputData, _this.fieldsArray, _this.data.id, _this.entry.contents).then(function (files) {
+                _this.fileUploaderProvider.clearTmpFiles(files);
+            });
         });
     };
     /**
-     * Close the chat users modal.
-     */
-    AddonModChatUsersPage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
-    };
-    /**
-     * Add "To user:".
+     * Fetch the entry data.
      *
-     * @param {any} user User object.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonModChatUsersPage.prototype.talkTo = function (user) {
-        this.viewCtrl.dismiss({ talkTo: user.fullname });
+    AddonModDataEditPage.prototype.fetchEntryData = function () {
+        var _this = this;
+        return this.dataProvider.getDatabase(this.courseId, this.module.id).then(function (data) {
+            _this.title = data.name || _this.title;
+            _this.data = data;
+            _this.cssClass = 'addon-data-entries-' + data.id;
+            return _this.dataProvider.getDatabaseAccessInformation(data.id);
+        }).then(function (accessData) {
+            _this.cssTemplate = _this.dataHelper.prefixCSS(_this.data.csstemplate, '.' + _this.cssClass);
+            if (_this.entryId) {
+                return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule, accessData.canmanageentries)
+                    .then(function (groupInfo) {
+                    _this.groupInfo = groupInfo;
+                    // Check selected group is accessible.
+                    if (groupInfo && groupInfo.groups && groupInfo.groups.length > 0) {
+                        if (!groupInfo.groups.some(function (group) { return _this.selectedGroup == group.id; })) {
+                            _this.selectedGroup = groupInfo.groups[0].id;
+                        }
+                    }
+                });
+            }
+        }).then(function () {
+            return _this.dataOffline.getEntryActions(_this.data.id, _this.entryId);
+        }).then(function (actions) {
+            _this.offlineActions = actions;
+            return _this.dataProvider.getFields(_this.data.id);
+        }).then(function (fieldsData) {
+            _this.fieldsArray = fieldsData;
+            _this.fields = _this.utils.arrayToObject(fieldsData, 'id');
+            return _this.dataHelper.getEntry(_this.data, _this.entryId, _this.offlineActions);
+        }).then(function (entry) {
+            if (entry) {
+                entry = entry.entry;
+                // Index contents by fieldid.
+                entry.contents = _this.utils.arrayToObject(entry.contents, 'fieldid');
+            }
+            else {
+                entry = {
+                    contents: {}
+                };
+            }
+            return _this.dataHelper.applyOfflineActions(entry, _this.offlineActions, _this.fieldsArray);
+        }).then(function (entryData) {
+            _this.entry = entryData;
+            _this.editFormRender = _this.displayEditFields();
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+        }).finally(function () {
+            _this.loaded = true;
+        });
     };
     /**
-     * Beep a user.
+     * Saves data.
      *
-     * @param {any} user User object.
+     * @return {Promise<any>} Resolved when done.
      */
-    AddonModChatUsersPage.prototype.beepTo = function (user) {
-        this.viewCtrl.dismiss({ beepTo: user.id });
+    AddonModDataEditPage.prototype.save = function () {
+        var _this = this;
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
+                if (_this.entryId) {
+                    return _this.returnToEntryList();
+                }
+                // New entry, no changes means no field filled, warn the user.
+                return Promise.reject('addon.mod_data.emptyaddform');
+            }
+            var modal = _this.domUtils.showModalLoading('core.sending', true);
+            // Create an ID to assign files.
+            var entryTemp = _this.entryId ? _this.entryId : -(new Date().getTime());
+            return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline).catch(function (e) {
+                if (!_this.offline) {
+                    // Cannot submit in online, prepare for offline usage.
+                    _this.offline = true;
+                    return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline);
+                }
+                return Promise.reject(e);
+            }).then(function (editData) {
+                if (editData.length > 0) {
+                    if (_this.entryId) {
+                        return _this.dataProvider.editEntry(_this.data.id, _this.entryId, _this.courseId, editData, _this.fields, undefined, _this.offline);
+                    }
+                    return _this.dataProvider.addEntry(_this.data.id, entryTemp, _this.courseId, editData, _this.selectedGroup, _this.fields, undefined, _this.offline);
+                }
+                return false;
+            }).then(function (result) {
+                if (!result) {
+                    // No field filled, warn the user.
+                    return Promise.reject('addon.mod_data.emptyaddform');
+                }
+                // This is done if entry is updated when editing or creating if not.
+                if ((_this.entryId && result.updated) || (!_this.entryId && result.newentryid)) {
+                    var promises = [];
+                    _this.entryId = _this.entryId || result.newentryid;
+                    promises.push(_this.dataProvider.invalidateEntryData(_this.data.id, _this.entryId, _this.siteId));
+                    promises.push(_this.dataProvider.invalidateEntriesData(_this.data.id, _this.siteId));
+                    return Promise.all(promises).then(function () {
+                        _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */].ENTRY_CHANGED, { dataId: _this.data.id, entryId: _this.entryId }, _this.siteId);
+                    }).finally(function () {
+                        return _this.returnToEntryList();
+                    });
+                }
+                else {
+                    _this.errors = {};
+                    result.fieldnotifications.forEach(function (fieldNotif) {
+                        var field = _this.fieldsArray.find(function (field) { return field.name == fieldNotif.fieldname; });
+                        if (field) {
+                            _this.errors[field.id] = fieldNotif.notification;
+                        }
+                    });
+                    _this.jsData['errors'] = _this.errors;
+                    setTimeout(function () {
+                        _this.scrollToFirstError();
+                    });
+                }
+            }).finally(function () {
+                modal.dismiss();
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Cannot edit entry', true);
+            return Promise.reject(null);
+        });
     };
     /**
-     * Page destroyed.
+     * Set group to see the database.
+     *
+     * @param  {number}       groupId Group identifier to set.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonModChatUsersPage.prototype.ngOnDestroy = function () {
-        this.onlineObserver && this.onlineObserver.unsubscribe();
+    AddonModDataEditPage.prototype.setGroup = function (groupId) {
+        this.selectedGroup = groupId;
+        this.loaded = false;
+        return this.fetchEntryData();
     };
-    AddonModChatUsersPage = __decorate([
+    /**
+     * Displays Edit Search Fields.
+     *
+     * @return {string}  Generated HTML.
+     */
+    AddonModDataEditPage.prototype.displayEditFields = function () {
+        if (!this.data.addtemplate) {
+            return '';
+        }
+        this.jsData = {
+            fields: this.fields,
+            contents: this.entry.contents,
+            form: this.editForm,
+            data: this.data,
+            errors: this.errors
+        };
+        var replace, render, template = this.data.addtemplate;
+        // Replace the fields found on template.
+        this.fieldsArray.forEach(function (field) {
+            replace = '[[' + field.name + ']]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            // Replace field by a generic directive.
+            render = '<addon-mod-data-field-plugin mode="edit" [field]="fields[' + field.id + ']"\
+                [value]="contents[' + field.id + ']" [form]="form" [database]="data" [error]="errors[' + field.id + ']">\
+                </addon-mod-data-field-plugin>';
+            template = template.replace(replace, render);
+            // Replace the field id tag.
+            replace = '[[' + field.name + '#id]]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            template = template.replace(replace, 'field_' + field.id);
+        });
+        return template;
+    };
+    /**
+     * Return to the entry list (previous page) discarding temp data.
+     *
+     * @return {Promise<any>}  Resolved when done.
+     */
+    AddonModDataEditPage.prototype.returnToEntryList = function () {
+        var _this = this;
+        var inputData = this.editForm.value;
+        return this.dataHelper.getEditTmpFiles(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (files) {
+            _this.fileUploaderProvider.clearTmpFiles(files);
+        }).finally(function () {
+            // Go back to entry list.
+            _this.forceLeave = true;
+            _this.navCtrl.pop();
+        });
+    };
+    /**
+     * Scroll to first error or to the top if not found.
+     */
+    AddonModDataEditPage.prototype.scrollToFirstError = function () {
+        if (!this.domUtils.scrollToElementBySelector(this.content, '.addon-data-error')) {
+            this.content.scrollToTop();
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+    ], AddonModDataEditPage.prototype, "content", void 0);
+    AddonModDataEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-chat-users',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_chat.currentusers\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="usersLoaded">\n        <ion-item text-wrap *ngFor="let user of users" [class.addon-mod-chat-user]="currentUserId != user.id && isOnline">\n            <ion-avatar item-start>\n                <img [src]="user.profileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" role="presentation">\n            </ion-avatar>\n            <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            <ng-container *ngIf="currentUserId != user.id && isOnline">\n                <button ion-button clear icon-left (click)="talkTo(user)">\n                    <ion-icon name="chatboxes"></ion-icon>\n                    {{ \'addon.mod_chat.talk\' | translate }}\n                </button>\n                <button ion-button clear icon-left (click)="beepTo(user)">\n                    <ion-icon name="notifications"></ion-icon>\n                    {{ \'addon.mod_chat.beep\' | translate }}\n                </button>\n            </ng-container>\n        </ion-item>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/,
+            selector: 'page-addon-mod-data-edit',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/data/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="save()" [attr.aria-label]="\'core.save\' | translate">\n                <ion-icon name="send"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-item text-wrap *ngIf="groupInfo && (groupInfo.separateGroups || groupInfo.visibleGroups)">\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="selectedGroup" (ionChange)="setGroup(selectedGroup)" aria-labelledby="addon-data-groupslabel">\n                <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n            </ion-select>\n        </ion-item>\n\n        <div class="addon-data-contents {{cssClass}}">\n            <style *ngIf="cssTemplate">\n                {{ cssTemplate }}\n            </style>\n\n            <form (ngSubmit)="save()" [formGroup]="editForm">\n                <core-compile-html [text]="editFormRender" [jsData]="jsData" [extraImports]="extraImports"></core-compile-html>\n            </form>\n        </div>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/data/pages/edit/edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__["a" /* Network */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_chat__["a" /* AddonModChatProvider */]])
-    ], AddonModChatUsersPage);
-    return AddonModChatUsersPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_groups__["a" /* CoreGroupsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_14__providers_fields_delegate__["a" /* AddonModDataFieldsDelegate */],
+            __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__providers_offline__["a" /* AddonModDataOfflineProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_helper__["a" /* AddonModDataHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */]])
+    ], AddonModDataEditPage);
+    return AddonModDataEditPage;
 }());
 
-//# sourceMappingURL=users.js.map
+//# sourceMappingURL=edit.js.map
 
 /***/ })
 

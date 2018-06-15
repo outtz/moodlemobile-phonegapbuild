@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -3741,7 +3742,7 @@
   font-style: normal;
 }
 
-ion-icon, .fa.icon {
+ion-icon {
   display: inline-block;
   font-family: "Ionicons";
   -moz-osx-font-smoothing: grayscale;
@@ -3755,7 +3756,7 @@ ion-icon, .fa.icon {
   speak: none;
 }
 
-ion-icon::before, .fa.icon::before {
+ion-icon::before {
   display: inline-block;
 }
 
@@ -3813,6 +3814,3050 @@ ion-icon::before, .fa.icon::before {
   font-style: normal;
   font-weight: 700;
   src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("../assets/fonts/noto-sans-bold.woff") format("woff"), url("../assets/fonts/noto-sans-bold.ttf") format("truetype");
+}
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../assets/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../assets/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../assets/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../assets/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-fw {
+  width: 1.28571em;
+  text-align: center;
+}
+
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none;
+}
+
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center;
+}
+
+.fa-li.fa-lg {
+  left: -1.85714em;
+}
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.fa.pull-left {
+  margin-right: .3em;
+}
+
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-glass:before {
+  content: "";
+}
+
+.fa-music:before {
+  content: "";
+}
+
+.fa-search:before {
+  content: "";
+}
+
+.fa-envelope-o:before {
+  content: "";
+}
+
+.fa-heart:before {
+  content: "";
+}
+
+.fa-star:before {
+  content: "";
+}
+
+.fa-star-o:before {
+  content: "";
+}
+
+.fa-user:before {
+  content: "";
+}
+
+.fa-film:before {
+  content: "";
+}
+
+.fa-th-large:before {
+  content: "";
+}
+
+.fa-th:before {
+  content: "";
+}
+
+.fa-th-list:before {
+  content: "";
+}
+
+.fa-check:before {
+  content: "";
+}
+
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "";
+}
+
+.fa-search-plus:before {
+  content: "";
+}
+
+.fa-search-minus:before {
+  content: "";
+}
+
+.fa-power-off:before {
+  content: "";
+}
+
+.fa-signal:before {
+  content: "";
+}
+
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
+}
+
+.fa-trash-o:before {
+  content: "";
+}
+
+.fa-home:before {
+  content: "";
+}
+
+.fa-file-o:before {
+  content: "";
+}
+
+.fa-clock-o:before {
+  content: "";
+}
+
+.fa-road:before {
+  content: "";
+}
+
+.fa-download:before {
+  content: "";
+}
+
+.fa-arrow-circle-o-down:before {
+  content: "";
+}
+
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+.fa-inbox:before {
+  content: "";
+}
+
+.fa-play-circle-o:before {
+  content: "";
+}
+
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
+}
+
+.fa-refresh:before {
+  content: "";
+}
+
+.fa-list-alt:before {
+  content: "";
+}
+
+.fa-lock:before {
+  content: "";
+}
+
+.fa-flag:before {
+  content: "";
+}
+
+.fa-headphones:before {
+  content: "";
+}
+
+.fa-volume-off:before {
+  content: "";
+}
+
+.fa-volume-down:before {
+  content: "";
+}
+
+.fa-volume-up:before {
+  content: "";
+}
+
+.fa-qrcode:before {
+  content: "";
+}
+
+.fa-barcode:before {
+  content: "";
+}
+
+.fa-tag:before {
+  content: "";
+}
+
+.fa-tags:before {
+  content: "";
+}
+
+.fa-book:before {
+  content: "";
+}
+
+.fa-bookmark:before {
+  content: "";
+}
+
+.fa-print:before {
+  content: "";
+}
+
+.fa-camera:before {
+  content: "";
+}
+
+.fa-font:before {
+  content: "";
+}
+
+.fa-bold:before {
+  content: "";
+}
+
+.fa-italic:before {
+  content: "";
+}
+
+.fa-text-height:before {
+  content: "";
+}
+
+.fa-text-width:before {
+  content: "";
+}
+
+.fa-align-left:before {
+  content: "";
+}
+
+.fa-align-center:before {
+  content: "";
+}
+
+.fa-align-right:before {
+  content: "";
+}
+
+.fa-align-justify:before {
+  content: "";
+}
+
+.fa-list:before {
+  content: "";
+}
+
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
+}
+
+.fa-indent:before {
+  content: "";
+}
+
+.fa-video-camera:before {
+  content: "";
+}
+
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "";
+}
+
+.fa-pencil:before {
+  content: "";
+}
+
+.fa-map-marker:before {
+  content: "";
+}
+
+.fa-adjust:before {
+  content: "";
+}
+
+.fa-tint:before {
+  content: "";
+}
+
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
+}
+
+.fa-share-square-o:before {
+  content: "";
+}
+
+.fa-check-square-o:before {
+  content: "";
+}
+
+.fa-arrows:before {
+  content: "";
+}
+
+.fa-step-backward:before {
+  content: "";
+}
+
+.fa-fast-backward:before {
+  content: "";
+}
+
+.fa-backward:before {
+  content: "";
+}
+
+.fa-play:before {
+  content: "";
+}
+
+.fa-pause:before {
+  content: "";
+}
+
+.fa-stop:before {
+  content: "";
+}
+
+.fa-forward:before {
+  content: "";
+}
+
+.fa-fast-forward:before {
+  content: "";
+}
+
+.fa-step-forward:before {
+  content: "";
+}
+
+.fa-eject:before {
+  content: "";
+}
+
+.fa-chevron-left:before {
+  content: "";
+}
+
+.fa-chevron-right:before {
+  content: "";
+}
+
+.fa-plus-circle:before {
+  content: "";
+}
+
+.fa-minus-circle:before {
+  content: "";
+}
+
+.fa-times-circle:before {
+  content: "";
+}
+
+.fa-check-circle:before {
+  content: "";
+}
+
+.fa-question-circle:before {
+  content: "";
+}
+
+.fa-info-circle:before {
+  content: "";
+}
+
+.fa-crosshairs:before {
+  content: "";
+}
+
+.fa-times-circle-o:before {
+  content: "";
+}
+
+.fa-check-circle-o:before {
+  content: "";
+}
+
+.fa-ban:before {
+  content: "";
+}
+
+.fa-arrow-left:before {
+  content: "";
+}
+
+.fa-arrow-right:before {
+  content: "";
+}
+
+.fa-arrow-up:before {
+  content: "";
+}
+
+.fa-arrow-down:before {
+  content: "";
+}
+
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
+}
+
+.fa-expand:before {
+  content: "";
+}
+
+.fa-compress:before {
+  content: "";
+}
+
+.fa-plus:before {
+  content: "";
+}
+
+.fa-minus:before {
+  content: "";
+}
+
+.fa-asterisk:before {
+  content: "";
+}
+
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+.fa-gift:before {
+  content: "";
+}
+
+.fa-leaf:before {
+  content: "";
+}
+
+.fa-fire:before {
+  content: "";
+}
+
+.fa-eye:before {
+  content: "";
+}
+
+.fa-eye-slash:before {
+  content: "";
+}
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+.fa-plane:before {
+  content: "";
+}
+
+.fa-calendar:before {
+  content: "";
+}
+
+.fa-random:before {
+  content: "";
+}
+
+.fa-comment:before {
+  content: "";
+}
+
+.fa-magnet:before {
+  content: "";
+}
+
+.fa-chevron-up:before {
+  content: "";
+}
+
+.fa-chevron-down:before {
+  content: "";
+}
+
+.fa-retweet:before {
+  content: "";
+}
+
+.fa-shopping-cart:before {
+  content: "";
+}
+
+.fa-folder:before {
+  content: "";
+}
+
+.fa-folder-open:before {
+  content: "";
+}
+
+.fa-arrows-v:before {
+  content: "";
+}
+
+.fa-arrows-h:before {
+  content: "";
+}
+
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
+}
+
+.fa-twitter-square:before {
+  content: "";
+}
+
+.fa-facebook-square:before {
+  content: "";
+}
+
+.fa-camera-retro:before {
+  content: "";
+}
+
+.fa-key:before {
+  content: "";
+}
+
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
+}
+
+.fa-comments:before {
+  content: "";
+}
+
+.fa-thumbs-o-up:before {
+  content: "";
+}
+
+.fa-thumbs-o-down:before {
+  content: "";
+}
+
+.fa-star-half:before {
+  content: "";
+}
+
+.fa-heart-o:before {
+  content: "";
+}
+
+.fa-sign-out:before {
+  content: "";
+}
+
+.fa-linkedin-square:before {
+  content: "";
+}
+
+.fa-thumb-tack:before {
+  content: "";
+}
+
+.fa-external-link:before {
+  content: "";
+}
+
+.fa-sign-in:before {
+  content: "";
+}
+
+.fa-trophy:before {
+  content: "";
+}
+
+.fa-github-square:before {
+  content: "";
+}
+
+.fa-upload:before {
+  content: "";
+}
+
+.fa-lemon-o:before {
+  content: "";
+}
+
+.fa-phone:before {
+  content: "";
+}
+
+.fa-square-o:before {
+  content: "";
+}
+
+.fa-bookmark-o:before {
+  content: "";
+}
+
+.fa-phone-square:before {
+  content: "";
+}
+
+.fa-twitter:before {
+  content: "";
+}
+
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "";
+}
+
+.fa-github:before {
+  content: "";
+}
+
+.fa-unlock:before {
+  content: "";
+}
+
+.fa-credit-card:before {
+  content: "";
+}
+
+.fa-feed:before,
+.fa-rss:before {
+  content: "";
+}
+
+.fa-hdd-o:before {
+  content: "";
+}
+
+.fa-bullhorn:before {
+  content: "";
+}
+
+.fa-bell:before {
+  content: "";
+}
+
+.fa-certificate:before {
+  content: "";
+}
+
+.fa-hand-o-right:before {
+  content: "";
+}
+
+.fa-hand-o-left:before {
+  content: "";
+}
+
+.fa-hand-o-up:before {
+  content: "";
+}
+
+.fa-hand-o-down:before {
+  content: "";
+}
+
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+.fa-globe:before {
+  content: "";
+}
+
+.fa-wrench:before {
+  content: "";
+}
+
+.fa-tasks:before {
+  content: "";
+}
+
+.fa-filter:before {
+  content: "";
+}
+
+.fa-briefcase:before {
+  content: "";
+}
+
+.fa-arrows-alt:before {
+  content: "";
+}
+
+.fa-group:before,
+.fa-users:before {
+  content: "";
+}
+
+.fa-chain:before,
+.fa-link:before {
+  content: "";
+}
+
+.fa-cloud:before {
+  content: "";
+}
+
+.fa-flask:before {
+  content: "";
+}
+
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+.fa-copy:before,
+.fa-files-o:before {
+  content: "";
+}
+
+.fa-paperclip:before {
+  content: "";
+}
+
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
+}
+
+.fa-square:before {
+  content: "";
+}
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
+}
+
+.fa-list-ul:before {
+  content: "";
+}
+
+.fa-list-ol:before {
+  content: "";
+}
+
+.fa-strikethrough:before {
+  content: "";
+}
+
+.fa-underline:before {
+  content: "";
+}
+
+.fa-table:before {
+  content: "";
+}
+
+.fa-magic:before {
+  content: "";
+}
+
+.fa-truck:before {
+  content: "";
+}
+
+.fa-pinterest:before {
+  content: "";
+}
+
+.fa-pinterest-square:before {
+  content: "";
+}
+
+.fa-google-plus-square:before {
+  content: "";
+}
+
+.fa-google-plus:before {
+  content: "";
+}
+
+.fa-money:before {
+  content: "";
+}
+
+.fa-caret-down:before {
+  content: "";
+}
+
+.fa-caret-up:before {
+  content: "";
+}
+
+.fa-caret-left:before {
+  content: "";
+}
+
+.fa-caret-right:before {
+  content: "";
+}
+
+.fa-columns:before {
+  content: "";
+}
+
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
+}
+
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
+}
+
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
+}
+
+.fa-envelope:before {
+  content: "";
+}
+
+.fa-linkedin:before {
+  content: "";
+}
+
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
+}
+
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
+}
+
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
+}
+
+.fa-comment-o:before {
+  content: "";
+}
+
+.fa-comments-o:before {
+  content: "";
+}
+
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
+}
+
+.fa-sitemap:before {
+  content: "";
+}
+
+.fa-umbrella:before {
+  content: "";
+}
+
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
+}
+
+.fa-lightbulb-o:before {
+  content: "";
+}
+
+.fa-exchange:before {
+  content: "";
+}
+
+.fa-cloud-download:before {
+  content: "";
+}
+
+.fa-cloud-upload:before {
+  content: "";
+}
+
+.fa-user-md:before {
+  content: "";
+}
+
+.fa-stethoscope:before {
+  content: "";
+}
+
+.fa-suitcase:before {
+  content: "";
+}
+
+.fa-bell-o:before {
+  content: "";
+}
+
+.fa-coffee:before {
+  content: "";
+}
+
+.fa-cutlery:before {
+  content: "";
+}
+
+.fa-file-text-o:before {
+  content: "";
+}
+
+.fa-building-o:before {
+  content: "";
+}
+
+.fa-hospital-o:before {
+  content: "";
+}
+
+.fa-ambulance:before {
+  content: "";
+}
+
+.fa-medkit:before {
+  content: "";
+}
+
+.fa-fighter-jet:before {
+  content: "";
+}
+
+.fa-beer:before {
+  content: "";
+}
+
+.fa-h-square:before {
+  content: "";
+}
+
+.fa-plus-square:before {
+  content: "";
+}
+
+.fa-angle-double-left:before {
+  content: "";
+}
+
+.fa-angle-double-right:before {
+  content: "";
+}
+
+.fa-angle-double-up:before {
+  content: "";
+}
+
+.fa-angle-double-down:before {
+  content: "";
+}
+
+.fa-angle-left:before {
+  content: "";
+}
+
+.fa-angle-right:before {
+  content: "";
+}
+
+.fa-angle-up:before {
+  content: "";
+}
+
+.fa-angle-down:before {
+  content: "";
+}
+
+.fa-desktop:before {
+  content: "";
+}
+
+.fa-laptop:before {
+  content: "";
+}
+
+.fa-tablet:before {
+  content: "";
+}
+
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
+}
+
+.fa-circle-o:before {
+  content: "";
+}
+
+.fa-quote-left:before {
+  content: "";
+}
+
+.fa-quote-right:before {
+  content: "";
+}
+
+.fa-spinner:before {
+  content: "";
+}
+
+.fa-circle:before {
+  content: "";
+}
+
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
+}
+
+.fa-github-alt:before {
+  content: "";
+}
+
+.fa-folder-o:before {
+  content: "";
+}
+
+.fa-folder-open-o:before {
+  content: "";
+}
+
+.fa-smile-o:before {
+  content: "";
+}
+
+.fa-frown-o:before {
+  content: "";
+}
+
+.fa-meh-o:before {
+  content: "";
+}
+
+.fa-gamepad:before {
+  content: "";
+}
+
+.fa-keyboard-o:before {
+  content: "";
+}
+
+.fa-flag-o:before {
+  content: "";
+}
+
+.fa-flag-checkered:before {
+  content: "";
+}
+
+.fa-terminal:before {
+  content: "";
+}
+
+.fa-code:before {
+  content: "";
+}
+
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
+}
+
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+.fa-location-arrow:before {
+  content: "";
+}
+
+.fa-crop:before {
+  content: "";
+}
+
+.fa-code-fork:before {
+  content: "";
+}
+
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
+}
+
+.fa-question:before {
+  content: "";
+}
+
+.fa-info:before {
+  content: "";
+}
+
+.fa-exclamation:before {
+  content: "";
+}
+
+.fa-superscript:before {
+  content: "";
+}
+
+.fa-subscript:before {
+  content: "";
+}
+
+.fa-eraser:before {
+  content: "";
+}
+
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+.fa-microphone:before {
+  content: "";
+}
+
+.fa-microphone-slash:before {
+  content: "";
+}
+
+.fa-shield:before {
+  content: "";
+}
+
+.fa-calendar-o:before {
+  content: "";
+}
+
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+.fa-rocket:before {
+  content: "";
+}
+
+.fa-maxcdn:before {
+  content: "";
+}
+
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+.fa-html5:before {
+  content: "";
+}
+
+.fa-css3:before {
+  content: "";
+}
+
+.fa-anchor:before {
+  content: "";
+}
+
+.fa-unlock-alt:before {
+  content: "";
+}
+
+.fa-bullseye:before {
+  content: "";
+}
+
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+.fa-rss-square:before {
+  content: "";
+}
+
+.fa-play-circle:before {
+  content: "";
+}
+
+.fa-ticket:before {
+  content: "";
+}
+
+.fa-minus-square:before {
+  content: "";
+}
+
+.fa-minus-square-o:before {
+  content: "";
+}
+
+.fa-level-up:before {
+  content: "";
+}
+
+.fa-level-down:before {
+  content: "";
+}
+
+.fa-check-square:before {
+  content: "";
+}
+
+.fa-pencil-square:before {
+  content: "";
+}
+
+.fa-external-link-square:before {
+  content: "";
+}
+
+.fa-share-square:before {
+  content: "";
+}
+
+.fa-compass:before {
+  content: "";
+}
+
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
+}
+
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
+}
+
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+.fa-euro:before,
+.fa-eur:before {
+  content: "";
+}
+
+.fa-gbp:before {
+  content: "";
+}
+
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+.fa-rupee:before,
+.fa-inr:before {
+  content: "";
+}
+
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "";
+}
+
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "";
+}
+
+.fa-won:before,
+.fa-krw:before {
+  content: "";
+}
+
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
+}
+
+.fa-file:before {
+  content: "";
+}
+
+.fa-file-text:before {
+  content: "";
+}
+
+.fa-sort-alpha-asc:before {
+  content: "";
+}
+
+.fa-sort-alpha-desc:before {
+  content: "";
+}
+
+.fa-sort-amount-asc:before {
+  content: "";
+}
+
+.fa-sort-amount-desc:before {
+  content: "";
+}
+
+.fa-sort-numeric-asc:before {
+  content: "";
+}
+
+.fa-sort-numeric-desc:before {
+  content: "";
+}
+
+.fa-thumbs-up:before {
+  content: "";
+}
+
+.fa-thumbs-down:before {
+  content: "";
+}
+
+.fa-youtube-square:before {
+  content: "";
+}
+
+.fa-youtube:before {
+  content: "";
+}
+
+.fa-xing:before {
+  content: "";
+}
+
+.fa-xing-square:before {
+  content: "";
+}
+
+.fa-youtube-play:before {
+  content: "";
+}
+
+.fa-dropbox:before {
+  content: "";
+}
+
+.fa-stack-overflow:before {
+  content: "";
+}
+
+.fa-instagram:before {
+  content: "";
+}
+
+.fa-flickr:before {
+  content: "";
+}
+
+.fa-adn:before {
+  content: "";
+}
+
+.fa-bitbucket:before {
+  content: "";
+}
+
+.fa-bitbucket-square:before {
+  content: "";
+}
+
+.fa-tumblr:before {
+  content: "";
+}
+
+.fa-tumblr-square:before {
+  content: "";
+}
+
+.fa-long-arrow-down:before {
+  content: "";
+}
+
+.fa-long-arrow-up:before {
+  content: "";
+}
+
+.fa-long-arrow-left:before {
+  content: "";
+}
+
+.fa-long-arrow-right:before {
+  content: "";
+}
+
+.fa-apple:before {
+  content: "";
+}
+
+.fa-windows:before {
+  content: "";
+}
+
+.fa-android:before {
+  content: "";
+}
+
+.fa-linux:before {
+  content: "";
+}
+
+.fa-dribbble:before {
+  content: "";
+}
+
+.fa-skype:before {
+  content: "";
+}
+
+.fa-foursquare:before {
+  content: "";
+}
+
+.fa-trello:before {
+  content: "";
+}
+
+.fa-female:before {
+  content: "";
+}
+
+.fa-male:before {
+  content: "";
+}
+
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "";
+}
+
+.fa-sun-o:before {
+  content: "";
+}
+
+.fa-moon-o:before {
+  content: "";
+}
+
+.fa-archive:before {
+  content: "";
+}
+
+.fa-bug:before {
+  content: "";
+}
+
+.fa-vk:before {
+  content: "";
+}
+
+.fa-weibo:before {
+  content: "";
+}
+
+.fa-renren:before {
+  content: "";
+}
+
+.fa-pagelines:before {
+  content: "";
+}
+
+.fa-stack-exchange:before {
+  content: "";
+}
+
+.fa-arrow-circle-o-right:before {
+  content: "";
+}
+
+.fa-arrow-circle-o-left:before {
+  content: "";
+}
+
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
+}
+
+.fa-dot-circle-o:before {
+  content: "";
+}
+
+.fa-wheelchair:before {
+  content: "";
+}
+
+.fa-vimeo-square:before {
+  content: "";
+}
+
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
+}
+
+.fa-plus-square-o:before {
+  content: "";
+}
+
+.fa-space-shuttle:before {
+  content: "";
+}
+
+.fa-slack:before {
+  content: "";
+}
+
+.fa-envelope-square:before {
+  content: "";
+}
+
+.fa-wordpress:before {
+  content: "";
+}
+
+.fa-openid:before {
+  content: "";
+}
+
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "";
+}
+
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
+}
+
+.fa-yahoo:before {
+  content: "";
+}
+
+.fa-google:before {
+  content: "";
+}
+
+.fa-reddit:before {
+  content: "";
+}
+
+.fa-reddit-square:before {
+  content: "";
+}
+
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+.fa-stumbleupon:before {
+  content: "";
+}
+
+.fa-delicious:before {
+  content: "";
+}
+
+.fa-digg:before {
+  content: "";
+}
+
+.fa-pied-piper-pp:before {
+  content: "";
+}
+
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+.fa-drupal:before {
+  content: "";
+}
+
+.fa-joomla:before {
+  content: "";
+}
+
+.fa-language:before {
+  content: "";
+}
+
+.fa-fax:before {
+  content: "";
+}
+
+.fa-building:before {
+  content: "";
+}
+
+.fa-child:before {
+  content: "";
+}
+
+.fa-paw:before {
+  content: "";
+}
+
+.fa-spoon:before {
+  content: "";
+}
+
+.fa-cube:before {
+  content: "";
+}
+
+.fa-cubes:before {
+  content: "";
+}
+
+.fa-behance:before {
+  content: "";
+}
+
+.fa-behance-square:before {
+  content: "";
+}
+
+.fa-steam:before {
+  content: "";
+}
+
+.fa-steam-square:before {
+  content: "";
+}
+
+.fa-recycle:before {
+  content: "";
+}
+
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
+}
+
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
+}
+
+.fa-tree:before {
+  content: "";
+}
+
+.fa-spotify:before {
+  content: "";
+}
+
+.fa-deviantart:before {
+  content: "";
+}
+
+.fa-soundcloud:before {
+  content: "";
+}
+
+.fa-database:before {
+  content: "";
+}
+
+.fa-file-pdf-o:before {
+  content: "";
+}
+
+.fa-file-word-o:before {
+  content: "";
+}
+
+.fa-file-excel-o:before {
+  content: "";
+}
+
+.fa-file-powerpoint-o:before {
+  content: "";
+}
+
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "";
+}
+
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "";
+}
+
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "";
+}
+
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
+}
+
+.fa-file-code-o:before {
+  content: "";
+}
+
+.fa-vine:before {
+  content: "";
+}
+
+.fa-codepen:before {
+  content: "";
+}
+
+.fa-jsfiddle:before {
+  content: "";
+}
+
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "";
+}
+
+.fa-circle-o-notch:before {
+  content: "";
+}
+
+.fa-ra:before,
+.fa-resistance:before,
+.fa-rebel:before {
+  content: "";
+}
+
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
+}
+
+.fa-git-square:before {
+  content: "";
+}
+
+.fa-git:before {
+  content: "";
+}
+
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
+.fa-hacker-news:before {
+  content: "";
+}
+
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+.fa-qq:before {
+  content: "";
+}
+
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
+}
+
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
+}
+
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
+}
+
+.fa-history:before {
+  content: "";
+}
+
+.fa-circle-thin:before {
+  content: "";
+}
+
+.fa-header:before {
+  content: "";
+}
+
+.fa-paragraph:before {
+  content: "";
+}
+
+.fa-sliders:before {
+  content: "";
+}
+
+.fa-share-alt:before {
+  content: "";
+}
+
+.fa-share-alt-square:before {
+  content: "";
+}
+
+.fa-bomb:before {
+  content: "";
+}
+
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+.fa-tty:before {
+  content: "";
+}
+
+.fa-binoculars:before {
+  content: "";
+}
+
+.fa-plug:before {
+  content: "";
+}
+
+.fa-slideshare:before {
+  content: "";
+}
+
+.fa-twitch:before {
+  content: "";
+}
+
+.fa-yelp:before {
+  content: "";
+}
+
+.fa-newspaper-o:before {
+  content: "";
+}
+
+.fa-wifi:before {
+  content: "";
+}
+
+.fa-calculator:before {
+  content: "";
+}
+
+.fa-paypal:before {
+  content: "";
+}
+
+.fa-google-wallet:before {
+  content: "";
+}
+
+.fa-cc-visa:before {
+  content: "";
+}
+
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+.fa-cc-discover:before {
+  content: "";
+}
+
+.fa-cc-amex:before {
+  content: "";
+}
+
+.fa-cc-paypal:before {
+  content: "";
+}
+
+.fa-cc-stripe:before {
+  content: "";
+}
+
+.fa-bell-slash:before {
+  content: "";
+}
+
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+.fa-trash:before {
+  content: "";
+}
+
+.fa-copyright:before {
+  content: "";
+}
+
+.fa-at:before {
+  content: "";
+}
+
+.fa-eyedropper:before {
+  content: "";
+}
+
+.fa-paint-brush:before {
+  content: "";
+}
+
+.fa-birthday-cake:before {
+  content: "";
+}
+
+.fa-area-chart:before {
+  content: "";
+}
+
+.fa-pie-chart:before {
+  content: "";
+}
+
+.fa-line-chart:before {
+  content: "";
+}
+
+.fa-lastfm:before {
+  content: "";
+}
+
+.fa-lastfm-square:before {
+  content: "";
+}
+
+.fa-toggle-off:before {
+  content: "";
+}
+
+.fa-toggle-on:before {
+  content: "";
+}
+
+.fa-bicycle:before {
+  content: "";
+}
+
+.fa-bus:before {
+  content: "";
+}
+
+.fa-ioxhost:before {
+  content: "";
+}
+
+.fa-angellist:before {
+  content: "";
+}
+
+.fa-cc:before {
+  content: "";
+}
+
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+.fa-meanpath:before {
+  content: "";
+}
+
+.fa-buysellads:before {
+  content: "";
+}
+
+.fa-connectdevelop:before {
+  content: "";
+}
+
+.fa-dashcube:before {
+  content: "";
+}
+
+.fa-forumbee:before {
+  content: "";
+}
+
+.fa-leanpub:before {
+  content: "";
+}
+
+.fa-sellsy:before {
+  content: "";
+}
+
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+.fa-simplybuilt:before {
+  content: "";
+}
+
+.fa-skyatlas:before {
+  content: "";
+}
+
+.fa-cart-plus:before {
+  content: "";
+}
+
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+.fa-diamond:before {
+  content: "";
+}
+
+.fa-ship:before {
+  content: "";
+}
+
+.fa-user-secret:before {
+  content: "";
+}
+
+.fa-motorcycle:before {
+  content: "";
+}
+
+.fa-street-view:before {
+  content: "";
+}
+
+.fa-heartbeat:before {
+  content: "";
+}
+
+.fa-venus:before {
+  content: "";
+}
+
+.fa-mars:before {
+  content: "";
+}
+
+.fa-mercury:before {
+  content: "";
+}
+
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "";
+}
+
+.fa-transgender-alt:before {
+  content: "";
+}
+
+.fa-venus-double:before {
+  content: "";
+}
+
+.fa-mars-double:before {
+  content: "";
+}
+
+.fa-venus-mars:before {
+  content: "";
+}
+
+.fa-mars-stroke:before {
+  content: "";
+}
+
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+.fa-neuter:before {
+  content: "";
+}
+
+.fa-genderless:before {
+  content: "";
+}
+
+.fa-facebook-official:before {
+  content: "";
+}
+
+.fa-pinterest-p:before {
+  content: "";
+}
+
+.fa-whatsapp:before {
+  content: "";
+}
+
+.fa-server:before {
+  content: "";
+}
+
+.fa-user-plus:before {
+  content: "";
+}
+
+.fa-user-times:before {
+  content: "";
+}
+
+.fa-hotel:before,
+.fa-bed:before {
+  content: "";
+}
+
+.fa-viacoin:before {
+  content: "";
+}
+
+.fa-train:before {
+  content: "";
+}
+
+.fa-subway:before {
+  content: "";
+}
+
+.fa-medium:before {
+  content: "";
+}
+
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "";
+}
+
+.fa-optin-monster:before {
+  content: "";
+}
+
+.fa-opencart:before {
+  content: "";
+}
+
+.fa-expeditedssl:before {
+  content: "";
+}
+
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "";
+}
+
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "";
+}
+
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "";
+}
+
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "";
+}
+
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "";
+}
+
+.fa-mouse-pointer:before {
+  content: "";
+}
+
+.fa-i-cursor:before {
+  content: "";
+}
+
+.fa-object-group:before {
+  content: "";
+}
+
+.fa-object-ungroup:before {
+  content: "";
+}
+
+.fa-sticky-note:before {
+  content: "";
+}
+
+.fa-sticky-note-o:before {
+  content: "";
+}
+
+.fa-cc-jcb:before {
+  content: "";
+}
+
+.fa-cc-diners-club:before {
+  content: "";
+}
+
+.fa-clone:before {
+  content: "";
+}
+
+.fa-balance-scale:before {
+  content: "";
+}
+
+.fa-hourglass-o:before {
+  content: "";
+}
+
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "";
+}
+
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "";
+}
+
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "";
+}
+
+.fa-hourglass:before {
+  content: "";
+}
+
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "";
+}
+
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "";
+}
+
+.fa-hand-scissors-o:before {
+  content: "";
+}
+
+.fa-hand-lizard-o:before {
+  content: "";
+}
+
+.fa-hand-spock-o:before {
+  content: "";
+}
+
+.fa-hand-pointer-o:before {
+  content: "";
+}
+
+.fa-hand-peace-o:before {
+  content: "";
+}
+
+.fa-trademark:before {
+  content: "";
+}
+
+.fa-registered:before {
+  content: "";
+}
+
+.fa-creative-commons:before {
+  content: "";
+}
+
+.fa-gg:before {
+  content: "";
+}
+
+.fa-gg-circle:before {
+  content: "";
+}
+
+.fa-tripadvisor:before {
+  content: "";
+}
+
+.fa-odnoklassniki:before {
+  content: "";
+}
+
+.fa-odnoklassniki-square:before {
+  content: "";
+}
+
+.fa-get-pocket:before {
+  content: "";
+}
+
+.fa-wikipedia-w:before {
+  content: "";
+}
+
+.fa-safari:before {
+  content: "";
+}
+
+.fa-chrome:before {
+  content: "";
+}
+
+.fa-firefox:before {
+  content: "";
+}
+
+.fa-opera:before {
+  content: "";
+}
+
+.fa-internet-explorer:before {
+  content: "";
+}
+
+.fa-tv:before,
+.fa-television:before {
+  content: "";
+}
+
+.fa-contao:before {
+  content: "";
+}
+
+.fa-500px:before {
+  content: "";
+}
+
+.fa-amazon:before {
+  content: "";
+}
+
+.fa-calendar-plus-o:before {
+  content: "";
+}
+
+.fa-calendar-minus-o:before {
+  content: "";
+}
+
+.fa-calendar-times-o:before {
+  content: "";
+}
+
+.fa-calendar-check-o:before {
+  content: "";
+}
+
+.fa-industry:before {
+  content: "";
+}
+
+.fa-map-pin:before {
+  content: "";
+}
+
+.fa-map-signs:before {
+  content: "";
+}
+
+.fa-map-o:before {
+  content: "";
+}
+
+.fa-map:before {
+  content: "";
+}
+
+.fa-commenting:before {
+  content: "";
+}
+
+.fa-commenting-o:before {
+  content: "";
+}
+
+.fa-houzz:before {
+  content: "";
+}
+
+.fa-vimeo:before {
+  content: "";
+}
+
+.fa-black-tie:before {
+  content: "";
+}
+
+.fa-fonticons:before {
+  content: "";
+}
+
+.fa-reddit-alien:before {
+  content: "";
+}
+
+.fa-edge:before {
+  content: "";
+}
+
+.fa-credit-card-alt:before {
+  content: "";
+}
+
+.fa-codiepie:before {
+  content: "";
+}
+
+.fa-modx:before {
+  content: "";
+}
+
+.fa-fort-awesome:before {
+  content: "";
+}
+
+.fa-usb:before {
+  content: "";
+}
+
+.fa-product-hunt:before {
+  content: "";
+}
+
+.fa-mixcloud:before {
+  content: "";
+}
+
+.fa-scribd:before {
+  content: "";
+}
+
+.fa-pause-circle:before {
+  content: "";
+}
+
+.fa-pause-circle-o:before {
+  content: "";
+}
+
+.fa-stop-circle:before {
+  content: "";
+}
+
+.fa-stop-circle-o:before {
+  content: "";
+}
+
+.fa-shopping-bag:before {
+  content: "";
+}
+
+.fa-shopping-basket:before {
+  content: "";
+}
+
+.fa-hashtag:before {
+  content: "";
+}
+
+.fa-bluetooth:before {
+  content: "";
+}
+
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+.fa-percent:before {
+  content: "";
+}
+
+.fa-gitlab:before {
+  content: "";
+}
+
+.fa-wpbeginner:before {
+  content: "";
+}
+
+.fa-wpforms:before {
+  content: "";
+}
+
+.fa-envira:before {
+  content: "";
+}
+
+.fa-universal-access:before {
+  content: "";
+}
+
+.fa-wheelchair-alt:before {
+  content: "";
+}
+
+.fa-question-circle-o:before {
+  content: "";
+}
+
+.fa-blind:before {
+  content: "";
+}
+
+.fa-audio-description:before {
+  content: "";
+}
+
+.fa-volume-control-phone:before {
+  content: "";
+}
+
+.fa-braille:before {
+  content: "";
+}
+
+.fa-assistive-listening-systems:before {
+  content: "";
+}
+
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "";
+}
+
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "";
+}
+
+.fa-glide:before {
+  content: "";
+}
+
+.fa-glide-g:before {
+  content: "";
+}
+
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "";
+}
+
+.fa-low-vision:before {
+  content: "";
+}
+
+.fa-viadeo:before {
+  content: "";
+}
+
+.fa-viadeo-square:before {
+  content: "";
+}
+
+.fa-snapchat:before {
+  content: "";
+}
+
+.fa-snapchat-ghost:before {
+  content: "";
+}
+
+.fa-snapchat-square:before {
+  content: "";
+}
+
+.fa-pied-piper:before {
+  content: "";
+}
+
+.fa-first-order:before {
+  content: "";
+}
+
+.fa-yoast:before {
+  content: "";
+}
+
+.fa-themeisle:before {
+  content: "";
+}
+
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "";
+}
+
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "";
+}
+
+.fa-handshake-o:before {
+  content: "";
+}
+
+.fa-envelope-open:before {
+  content: "";
+}
+
+.fa-envelope-open-o:before {
+  content: "";
+}
+
+.fa-linode:before {
+  content: "";
+}
+
+.fa-address-book:before {
+  content: "";
+}
+
+.fa-address-book-o:before {
+  content: "";
+}
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "";
+}
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "";
+}
+
+.fa-user-circle:before {
+  content: "";
+}
+
+.fa-user-circle-o:before {
+  content: "";
+}
+
+.fa-user-o:before {
+  content: "";
+}
+
+.fa-id-badge:before {
+  content: "";
+}
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "";
+}
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "";
+}
+
+.fa-quora:before {
+  content: "";
+}
+
+.fa-free-code-camp:before {
+  content: "";
+}
+
+.fa-telegram:before {
+  content: "";
+}
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "";
+}
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "";
+}
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "";
+}
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "";
+}
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "";
+}
+
+.fa-shower:before {
+  content: "";
+}
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "";
+}
+
+.fa-podcast:before {
+  content: "";
+}
+
+.fa-window-maximize:before {
+  content: "";
+}
+
+.fa-window-minimize:before {
+  content: "";
+}
+
+.fa-window-restore:before {
+  content: "";
+}
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "";
+}
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "";
+}
+
+.fa-bandcamp:before {
+  content: "";
+}
+
+.fa-grav:before {
+  content: "";
+}
+
+.fa-etsy:before {
+  content: "";
+}
+
+.fa-imdb:before {
+  content: "";
+}
+
+.fa-ravelry:before {
+  content: "";
+}
+
+.fa-eercast:before {
+  content: "";
+}
+
+.fa-microchip:before {
+  content: "";
+}
+
+.fa-snowflake-o:before {
+  content: "";
+}
+
+.fa-superpowers:before {
+  content: "";
+}
+
+.fa-wpexplorer:before {
+  content: "";
+}
+
+.fa-meetup:before {
+  content: "";
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 
 ion-action-sheet {
@@ -4904,19 +7949,16 @@ a,
 a div,
 a span,
 a ion-icon,
-a .fa.icon,
 a ion-label,
 button,
 button div,
 button span,
 button ion-icon,
-button .fa.icon,
 button ion-label,
 [tappable],
 [tappable] div,
 [tappable] span,
 [tappable] ion-icon,
-[tappable] .fa.icon,
 [tappable] ion-label,
 input,
 textarea {
@@ -5823,18 +8865,16 @@ button[disabled],
   border-left-width: 0;
 }
 
-[icon-left] ion-icon, [icon-left] .fa.icon,
-[icon-start] ion-icon,
-[icon-start] .fa.icon {
+[icon-left] ion-icon,
+[icon-start] ion-icon {
   font-size: 1.4em;
   line-height: .67;
   pointer-events: none;
   padding-right: 0.3em;
 }
 
-[icon-right] ion-icon, [icon-right] .fa.icon,
-[icon-end] ion-icon,
-[icon-end] .fa.icon {
+[icon-right] ion-icon,
+[icon-end] ion-icon {
   font-size: 1.4em;
   line-height: .67;
   pointer-events: none;
@@ -5846,7 +8886,7 @@ button[disabled],
   min-width: .9em;
 }
 
-[icon-only] ion-icon, [icon-only] .fa.icon {
+[icon-only] ion-icon {
   padding: 0 0.5em;
   font-size: 1.8em;
   line-height: .67;
@@ -5884,7 +8924,7 @@ button[disabled],
   padding: 0 0.9em;
 }
 
-.button-small-ios[icon-only] ion-icon, .button-small-ios[icon-only] .fa.icon {
+.button-small-ios[icon-only] ion-icon {
   font-size: 1.3em;
 }
 
@@ -6292,7 +9332,7 @@ button[disabled],
   padding: 0 0.9em;
 }
 
-.button-small-md[icon-only] ion-icon, .button-small-md[icon-only] .fa.icon {
+.button-small-md[icon-only] ion-icon {
   font-size: 1.4em;
 }
 
@@ -6890,7 +9930,7 @@ button[disabled],
   padding: 0 0.9em;
 }
 
-.button-small-wp[icon-only] ion-icon, .button-small-wp[icon-only] .fa.icon {
+.button-small-wp[icon-only] ion-icon {
   font-size: 1.4em;
 }
 
@@ -11036,7 +14076,7 @@ ion-chip .button {
   margin: 0;
 }
 
-ion-chip ion-icon, ion-chip .fa.icon {
+ion-chip ion-icon {
   text-align: center;
   border-radius: 50%;
   width: 32px;
@@ -11076,7 +14116,7 @@ ion-chip ion-avatar img {
   margin: 0 10px;
 }
 
-.chip-ios > ion-icon, .chip-ios > .fa.icon {
+.chip-ios > ion-icon {
   color: #fff;
   background-color: #f98012;
 }
@@ -11149,7 +14189,7 @@ ion-chip ion-avatar img {
   margin: 0 10px;
 }
 
-.chip-md > ion-icon, .chip-md > .fa.icon {
+.chip-md > ion-icon {
   color: #fff;
   background-color: #f98012;
 }
@@ -11222,7 +14262,7 @@ ion-chip ion-avatar img {
   margin: 0 10px;
 }
 
-.chip-wp > ion-icon, .chip-wp > .fa.icon {
+.chip-wp > ion-icon {
   color: #fff;
   background-color: #f98012;
 }
@@ -12020,7 +15060,7 @@ ion-datetime {
   contain: strict;
 }
 
-.fab ion-icon, .fab .fa.icon {
+.fab ion-icon {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -15770,12 +18810,12 @@ ion-fab-list[side=right] {
   }
 }
 
-ion-icon, .fa.icon {
+ion-icon {
   display: inline-block;
   font-size: 1.2em;
 }
 
-ion-icon[small], [small].fa.icon {
+ion-icon[small] {
   min-height: 1.1em;
   font-size: 1.1em;
 }
@@ -16359,37 +19399,32 @@ ion-input.item {
   align-items: flex-start;
 }
 
-.item > ion-icon[small]:first-child, .item > [small].fa.icon:first-child,
-.item-inner > ion-icon[small]:first-child,
-.item-inner > [small].fa.icon:first-child {
+.item > ion-icon[small]:first-child,
+.item-inner > ion-icon[small]:first-child {
   min-width: 18px;
 }
 
-.item > ion-icon:first-child, .item > .fa.icon:first-child,
-.item-inner > ion-icon:first-child,
-.item-inner > .fa.icon:first-child {
+.item > ion-icon:first-child,
+.item-inner > ion-icon:first-child {
   text-align: center;
   min-width: 24px;
 }
 
-.item > ion-icon, .item > .fa.icon,
-.item-inner > ion-icon,
-.item-inner > .fa.icon {
+.item > ion-icon,
+.item-inner > ion-icon {
   min-height: 2.8rem;
   font-size: 2.8rem;
   line-height: 1;
 }
 
-.item > ion-icon[large], .item > [large].fa.icon,
-.item-inner > ion-icon[large],
-.item-inner > [large].fa.icon {
+.item > ion-icon[large],
+.item-inner > ion-icon[large] {
   min-height: 3.2rem;
   font-size: 3.2rem;
 }
 
-.item > ion-icon[small], .item > [small].fa.icon,
-.item-inner > ion-icon[small],
-.item-inner > [small].fa.icon {
+.item > ion-icon[small],
+.item-inner > ion-icon[small] {
   min-height: 1.8rem;
   font-size: 1.8rem;
 }
@@ -16453,7 +19488,7 @@ ion-reorder {
   order: -1;
 }
 
-ion-reorder ion-icon, ion-reorder .fa.icon {
+ion-reorder ion-icon {
   pointer-events: none;
 }
 
@@ -16560,9 +19595,8 @@ ion-item-options:not([icon-start]) .button:not([icon-only]) .button-inner {
   flex-direction: column;
 }
 
-ion-item-options:not([icon-left]) .button:not([icon-only]) ion-icon, ion-item-options:not([icon-left]) .button:not([icon-only]) .fa.icon,
-ion-item-options:not([icon-start]) .button:not([icon-only]) ion-icon,
-ion-item-options:not([icon-start]) .button:not([icon-only]) .fa.icon {
+ion-item-options:not([icon-left]) .button:not([icon-only]) ion-icon,
+ion-item-options:not([icon-start]) .button:not([icon-only]) ion-icon {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0.3em;
@@ -16722,13 +19756,10 @@ ion-item-sliding.active-swipe-left button[expandable] {
   margin: 8px;
 }
 
-.item-ios ion-icon[item-left], .item-ios [item-left].fa.icon,
+.item-ios ion-icon[item-left],
 .item-ios ion-icon[item-right],
-.item-ios [item-right].fa.icon,
 .item-ios ion-icon[item-start],
-.item-ios [item-start].fa.icon,
-.item-ios ion-icon[item-end],
-.item-ios [item-end].fa.icon {
+.item-ios ion-icon[item-end] {
   margin-left: 0;
   margin-top: 9px;
   margin-bottom: 8px;
@@ -16740,7 +19771,7 @@ ion-item-sliding.active-swipe-left button[expandable] {
   font-size: 1.3rem;
 }
 
-.item-ios .item-button[icon-only] ion-icon, .item-ios .item-button[icon-only] .fa.icon,
+.item-ios .item-button[icon-only] ion-icon,
 .item-ios .item-button[icon-only] {
   padding: 0 1px;
 }
@@ -17080,13 +20111,10 @@ a.item-md:not([detail-none]) .item-inner {
   margin: 9px 8px 9px 0;
 }
 
-.item-md ion-icon[item-left], .item-md [item-left].fa.icon,
+.item-md ion-icon[item-left],
 .item-md ion-icon[item-right],
-.item-md [item-right].fa.icon,
 .item-md ion-icon[item-start],
-.item-md [item-start].fa.icon,
-.item-md ion-icon[item-end],
-.item-md [item-end].fa.icon {
+.item-md ion-icon[item-end] {
   margin-left: 0;
   margin-top: 11px;
   margin-bottom: 10px;
@@ -17098,18 +20126,15 @@ a.item-md:not([detail-none]) .item-inner {
   font-size: 1.2rem;
 }
 
-.item-md .item-button[icon-only] ion-icon, .item-md .item-button[icon-only] .fa.icon,
+.item-md .item-button[icon-only] ion-icon,
 .item-md .item-button[icon-only] {
   padding: 0 1px;
 }
 
-.item-md ion-icon[item-left] + .item-inner, .item-md [item-left].fa.icon + .item-inner,
+.item-md ion-icon[item-left] + .item-inner,
 .item-md ion-icon[item-left] + .item-input,
-.item-md [item-left].fa.icon + .item-input,
 .item-md ion-icon[item-start] + .item-inner,
-.item-md [item-start].fa.icon + .item-inner,
-.item-md ion-icon[item-start] + .item-input,
-.item-md [item-start].fa.icon + .item-input {
+.item-md ion-icon[item-start] + .item-input {
   margin-left: 24px;
 }
 
@@ -17433,13 +20458,10 @@ a.item-wp:not([detail-none]) .item-inner {
   margin: 9px 8px 9px 0;
 }
 
-.item-wp ion-icon[item-left], .item-wp [item-left].fa.icon,
+.item-wp ion-icon[item-left],
 .item-wp ion-icon[item-right],
-.item-wp [item-right].fa.icon,
 .item-wp ion-icon[item-start],
-.item-wp [item-start].fa.icon,
-.item-wp ion-icon[item-end],
-.item-wp [item-end].fa.icon {
+.item-wp ion-icon[item-end] {
   margin-left: 0;
   margin-top: 11px;
   margin-bottom: 10px;
@@ -17451,7 +20473,7 @@ a.item-wp:not([detail-none]) .item-inner {
   font-size: 1.2rem;
 }
 
-.item-wp .item-button[icon-only] ion-icon, .item-wp .item-button[icon-only] .fa.icon,
+.item-wp .item-button[icon-only] ion-icon,
 .item-wp .item-button[icon-only] {
   padding: 0 1px;
 }
@@ -17461,13 +20483,10 @@ a.item-wp:not([detail-none]) .item-inner {
   line-height: 1.5;
 }
 
-.item-wp ion-icon[item-left] + .item-inner, .item-wp [item-left].fa.icon + .item-inner,
+.item-wp ion-icon[item-left] + .item-inner,
 .item-wp ion-icon[item-left] + .item-input,
-.item-wp [item-left].fa.icon + .item-input,
 .item-wp ion-icon[item-start] + .item-inner,
-.item-wp [item-start].fa.icon + .item-inner,
-.item-wp ion-icon[item-start] + .item-input,
-.item-wp [item-start].fa.icon + .item-input {
+.item-wp ion-icon[item-start] + .item-input {
   margin-left: 8px;
 }
 
@@ -20192,7 +23211,7 @@ ion-range ion-label {
   flex: initial;
 }
 
-ion-range ion-icon, ion-range .fa.icon {
+ion-range ion-icon {
   min-height: 2.4rem;
   font-size: 2.4rem;
   line-height: 1;
@@ -21799,7 +24818,7 @@ ion-segment {
   background-color: transparent;
 }
 
-.segment-ios .segment-button ion-icon, .segment-ios .segment-button .fa.icon {
+.segment-ios .segment-button ion-icon {
   font-size: 2.6rem;
   line-height: 2.8rem;
 }
@@ -21878,7 +24897,7 @@ ion-segment {
   line-height: 2.5rem;
 }
 
-.toolbar-ios .segment-button ion-icon, .toolbar-ios .segment-button .fa.icon {
+.toolbar-ios .segment-button ion-icon {
   font-size: 2.2rem;
   line-height: 2.4rem;
 }
@@ -22139,7 +25158,7 @@ ion-segment {
   padding: 0 6px;
 }
 
-.segment-md .segment-button ion-icon, .segment-md .segment-button .fa.icon {
+.segment-md .segment-button ion-icon {
   font-size: 2.6rem;
   line-height: 4rem;
 }
@@ -22277,7 +25296,7 @@ ion-segment {
   opacity: 1;
 }
 
-.segment-wp .segment-button ion-icon, .segment-wp .segment-button .fa.icon {
+.segment-wp .segment-button ion-icon {
   font-size: 2.6rem;
   line-height: 4rem;
 }
@@ -23840,7 +26859,7 @@ ion-spinner.spinner-paused svg {
   bottom: auto;
 }
 
-.tab-button, .core-tabs-bar > a {
+.tab-button, .core-tabs-bar a.tab-slide {
   margin: 0;
   text-align: center;
   border-radius: 0;
@@ -23887,7 +26906,6 @@ ion-spinner.spinner-paused svg {
 
 .tab-disabled ion-badge,
 .tab-disabled ion-icon,
-.tab-disabled .fa.icon,
 .tab-disabled span {
   opacity: .4;
 }
@@ -23919,20 +26937,23 @@ ion-spinner.spinner-paused svg {
   white-space: normal;
 }
 
-[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon {
+[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] .core-tabs-bar a.tab-slide .tab-button-icon, .core-tabs-bar [tabsLayout=icon-bottom] a.tab-slide .tab-button-icon {
   -webkit-box-ordinal-group: 11;
   -webkit-order: 10;
   -ms-flex-order: 10;
   order: 10;
 }
 
-[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] .core-tabs-bar > a,
+[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] .core-tabs-bar a.tab-slide, .core-tabs-bar [tabsLayout=icon-left] a.tab-slide,
 [tabsLayout=icon-right] .tab-button,
-[tabsLayout=icon-right] .core-tabs-bar > a,
+[tabsLayout=icon-right] .core-tabs-bar a.tab-slide, .core-tabs-bar
+[tabsLayout=icon-right] a.tab-slide,
 [tabsLayout=icon-start] .tab-button,
-[tabsLayout=icon-start] .core-tabs-bar > a,
+[tabsLayout=icon-start] .core-tabs-bar a.tab-slide, .core-tabs-bar
+[tabsLayout=icon-start] a.tab-slide,
 [tabsLayout=icon-end] .tab-button,
-[tabsLayout=icon-end] .core-tabs-bar > a {
+[tabsLayout=icon-end] .core-tabs-bar a.tab-slide, .core-tabs-bar
+[tabsLayout=icon-end] a.tab-slide {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -23940,17 +26961,19 @@ ion-spinner.spinner-paused svg {
   flex-direction: row;
 }
 
-[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] .core-tabs-bar a.tab-slide .tab-button-icon, .core-tabs-bar [tabsLayout=icon-left] a.tab-slide .tab-button-icon,
 [tabsLayout=icon-start] .tab-button .tab-button-icon,
-[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-icon {
+[tabsLayout=icon-start] .core-tabs-bar a.tab-slide .tab-button-icon, .core-tabs-bar
+[tabsLayout=icon-start] a.tab-slide .tab-button-icon {
   padding-right: 8px;
   text-align: right;
   text-align: end;
 }
 
-[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] .core-tabs-bar a.tab-slide .tab-button-icon, .core-tabs-bar [tabsLayout=icon-right] a.tab-slide .tab-button-icon,
 [tabsLayout=icon-end] .tab-button .tab-button-icon,
-[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-icon {
+[tabsLayout=icon-end] .core-tabs-bar a.tab-slide .tab-button-icon, .core-tabs-bar
+[tabsLayout=icon-end] a.tab-slide .tab-button-icon {
   padding-left: 8px;
   text-align: left;
   text-align: start;
@@ -24004,7 +27027,7 @@ ion-spinner.spinner-paused svg {
   border-bottom: 0.55px solid rgba(0, 0, 0, 0.3);
 }
 
-.tabs-ios .tab-button, .tabs-ios .core-tabs-bar > a {
+.tabs-ios .tab-button, .tabs-ios .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios a.tab-slide {
   max-width: 240px;
   min-height: 49px;
   font-size: 10px;
@@ -24013,13 +27036,14 @@ ion-spinner.spinner-paused svg {
   padding: 0 2px;
 }
 
-.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-ios a.tab-slide:hover:not(.disable-hover),
 .tabs-ios .tab-button[aria-selected=true],
-.tabs-ios .core-tabs-bar > a[aria-selected=true] {
+.tabs-ios .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-ios a[aria-selected=true].tab-slide {
   color: #f98012;
 }
 
-.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-ios a[aria-selected=true].tab-slide .tab-button-icon {
   color: #f98012;
 }
 
@@ -24046,52 +27070,55 @@ ion-spinner.spinner-paused svg {
   vertical-align: top;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar .tabs-ios[tabsLayout=icon-right] a.tab-slide .tab-button-text,
 .tabs-ios[tabsLayout=icon-left] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-left] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-left] a.tab-slide .tab-button-text,
 .tabs-ios[tabsLayout=icon-end] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-end] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-end] a.tab-slide .tab-button-text,
 .tabs-ios[tabsLayout=icon-start] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-text {
+.tabs-ios[tabsLayout=icon-start] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-start] a.tab-slide .tab-button-text {
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-ios[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
+.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar .tabs-ios[tabsLayout=icon-right] a.tab-slide ion-icon,
 .tabs-ios[tabsLayout=icon-left] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-left] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .fa.icon,
+.tabs-ios[tabsLayout=icon-left] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-left] a.tab-slide ion-icon,
 .tabs-ios[tabsLayout=icon-end] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-end] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .fa.icon,
+.tabs-ios[tabsLayout=icon-end] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-end] a.tab-slide ion-icon,
 .tabs-ios[tabsLayout=icon-start] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-start] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .fa.icon {
+.tabs-ios[tabsLayout=icon-start] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-ios[tabsLayout=icon-start] a.tab-slide ion-icon {
   min-width: 24px;
   height: 26px;
   font-size: 24px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios[tabsLayout=icon-hide] a.tab-slide,
 .tabs-ios .tab-button.has-title-only,
-.tabs-ios .core-tabs-bar > a.has-title-only {
+.tabs-ios .core-tabs-bar a.has-title-only.tab-slide, .core-tabs-bar
+.tabs-ios a.has-title-only.tab-slide {
   min-height: 41px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar .tabs-ios[tabsLayout=icon-hide] a.tab-slide .tab-button-text,
 .tabs-ios .tab-button.has-title-only .tab-button-text,
-.tabs-ios .core-tabs-bar > a.has-title-only .tab-button-text {
+.tabs-ios .core-tabs-bar a.has-title-only.tab-slide .tab-button-text, .core-tabs-bar
+.tabs-ios a.has-title-only.tab-slide .tab-button-text {
   margin: 2px 0;
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios[tabsLayout=title-hide] a.tab-slide,
 .tabs-ios .tab-button.icon-only,
-.tabs-ios .core-tabs-bar > a.icon-only {
+.tabs-ios .core-tabs-bar a.icon-only.tab-slide, .core-tabs-bar
+.tabs-ios a.icon-only.tab-slide {
   min-height: 41px;
 }
 
@@ -24100,18 +27127,21 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-ios-primary .tab-button, .tabs-ios-primary .core-tabs-bar > a,
+.tabs-ios-primary .tab-button, .tabs-ios-primary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-primary a.tab-slide,
 .tabs-ios-primary .tab-button-icon,
 .tabs-ios-primary .tab-button:hover:not(.disable-hover),
-.tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-primary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-primary a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-primary .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-primary a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-primary a[aria-selected=true].tab-slide,
 .tabs-ios-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-primary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-primary a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24120,18 +27150,21 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-ios-secondary .tab-button, .tabs-ios-secondary .core-tabs-bar > a,
+.tabs-ios-secondary .tab-button, .tabs-ios-secondary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-secondary a.tab-slide,
 .tabs-ios-secondary .tab-button-icon,
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover),
-.tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-secondary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-secondary a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-secondary .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-secondary a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-secondary a[aria-selected=true].tab-slide,
 .tabs-ios-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-secondary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-secondary a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24140,18 +27173,21 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-ios-danger .tab-button, .tabs-ios-danger .core-tabs-bar > a,
+.tabs-ios-danger .tab-button, .tabs-ios-danger .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-danger a.tab-slide,
 .tabs-ios-danger .tab-button-icon,
 .tabs-ios-danger .tab-button:hover:not(.disable-hover),
-.tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-danger .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-danger a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-danger .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-danger a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-danger a[aria-selected=true].tab-slide,
 .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-danger .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-danger a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24160,18 +27196,21 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-ios-light .tab-button, .tabs-ios-light .core-tabs-bar > a,
+.tabs-ios-light .tab-button, .tabs-ios-light .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-light a.tab-slide,
 .tabs-ios-light .tab-button-icon,
 .tabs-ios-light .tab-button:hover:not(.disable-hover),
-.tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-light .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-light a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-light .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-light a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-light a[aria-selected=true].tab-slide,
 .tabs-ios-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-light .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-light a[aria-selected=true].tab-slide .tab-button-icon {
   color: #000;
 }
 
@@ -24180,18 +27219,21 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-ios-gray .tab-button, .tabs-ios-gray .core-tabs-bar > a,
+.tabs-ios-gray .tab-button, .tabs-ios-gray .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-gray a.tab-slide,
 .tabs-ios-gray .tab-button-icon,
 .tabs-ios-gray .tab-button:hover:not(.disable-hover),
-.tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-gray .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-gray a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-gray .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-gray a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-gray a[aria-selected=true].tab-slide,
 .tabs-ios-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-gray .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-gray a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24200,18 +27242,21 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-ios-dark .tab-button, .tabs-ios-dark .core-tabs-bar > a,
+.tabs-ios-dark .tab-button, .tabs-ios-dark .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-dark a.tab-slide,
 .tabs-ios-dark .tab-button-icon,
 .tabs-ios-dark .tab-button:hover:not(.disable-hover),
-.tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-dark .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-dark a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-dark .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-dark a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-dark a[aria-selected=true].tab-slide,
 .tabs-ios-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-dark .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-dark a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24220,18 +27265,21 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-ios-warning .tab-button, .tabs-ios-warning .core-tabs-bar > a,
+.tabs-ios-warning .tab-button, .tabs-ios-warning .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-warning a.tab-slide,
 .tabs-ios-warning .tab-button-icon,
 .tabs-ios-warning .tab-button:hover:not(.disable-hover),
-.tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-warning .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-warning a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-warning .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-warning a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-warning a[aria-selected=true].tab-slide,
 .tabs-ios-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-warning .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-warning a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24240,18 +27288,21 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-ios-success .tab-button, .tabs-ios-success .core-tabs-bar > a,
+.tabs-ios-success .tab-button, .tabs-ios-success .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-success a.tab-slide,
 .tabs-ios-success .tab-button-icon,
 .tabs-ios-success .tab-button:hover:not(.disable-hover),
-.tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-success .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-success a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-success .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-success a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-success a[aria-selected=true].tab-slide,
 .tabs-ios-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-success .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-success a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24260,18 +27311,21 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-ios-info .tab-button, .tabs-ios-info .core-tabs-bar > a,
+.tabs-ios-info .tab-button, .tabs-ios-info .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-ios-info a.tab-slide,
 .tabs-ios-info .tab-button-icon,
 .tabs-ios-info .tab-button:hover:not(.disable-hover),
-.tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios-info .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar
+.tabs-ios-info a.tab-slide:hover:not(.disable-hover),
 .tabs-ios-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
+.tabs-ios-info .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-ios-info a.tab-slide:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-ios-info a[aria-selected=true].tab-slide,
 .tabs-ios-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios-info .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-ios-info a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24279,14 +27333,14 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-md .tab-button, .tabs-md .core-tabs-bar > a {
+.tabs-md .tab-button, .tabs-md .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md a.tab-slide {
   min-height: 5.6rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   padding: 0;
 }
 
-.tabs-md .tab-button[aria-selected=true], .tabs-md .core-tabs-bar > a[aria-selected=true] {
+.tabs-md .tab-button[aria-selected=true], .tabs-md .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-md a[aria-selected=true].tab-slide {
   color: #f98012;
   padding: 0;
 }
@@ -24303,7 +27357,7 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 80%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text {
+.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-text, .core-tabs-bar .tabs-md a[aria-selected=true].tab-slide .tab-button-text {
   -webkit-transform: scale3d(1.16667, 1.16667, 1);
   transform: scale3d(1.16667, 1.16667, 1);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -24317,7 +27371,7 @@ ion-spinner.spinner-paused svg {
   margin-bottom: 0;
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text {
+.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar a.tab-slide .tab-button-text, .core-tabs-bar .tabs-md[tabsLayout=icon-bottom] a.tab-slide .tab-button-text {
   margin-top: 0;
 }
 
@@ -24334,38 +27388,43 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 150%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-md a[aria-selected=true].tab-slide .tab-button-icon {
   color: #f98012;
   -webkit-transform: translate3d(0,  -2px,  0);
   transform: translate3d(0,  -2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-md[tabsLayout=icon-right] a[aria-selected=true].tab-slide .tab-button-icon,
 .tabs-md[tabsLayout=icon-end] .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-end] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md[tabsLayout=icon-end] .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md[tabsLayout=icon-end] a[aria-selected=true].tab-slide .tab-button-icon {
   -webkit-transform: translate3d(2px,  0,  0);
   transform: translate3d(2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-md[tabsLayout=icon-bottom] a[aria-selected=true].tab-slide .tab-button-icon {
   -webkit-transform: translate3d(0,  2px,  0);
   transform: translate3d(0,  2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-md[tabsLayout=icon-left] a[aria-selected=true].tab-slide .tab-button-icon,
 .tabs-md[tabsLayout=icon-start] .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-start] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md[tabsLayout=icon-start] .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md[tabsLayout=icon-start] a[aria-selected=true].tab-slide .tab-button-icon {
   -webkit-transform: translate3d(-2px,  0,  0);
   transform: translate3d(-2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md[tabsLayout=icon-hide] a.tab-slide,
 .tabs-md[tabsLayout=title-hide] .tab-button,
-.tabs-md[tabsLayout=title-hide] .core-tabs-bar > a,
+.tabs-md[tabsLayout=title-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar
+.tabs-md[tabsLayout=title-hide] a.tab-slide,
 .tabs-md .tab-button.icon-only,
-.tabs-md .core-tabs-bar > a.icon-only,
+.tabs-md .core-tabs-bar a.icon-only.tab-slide, .core-tabs-bar
+.tabs-md a.icon-only.tab-slide,
 .tabs-md .tab-button.has-title-only,
-.tabs-md .core-tabs-bar > a.has-title-only {
+.tabs-md .core-tabs-bar a.has-title-only.tab-slide, .core-tabs-bar
+.tabs-md a.has-title-only.tab-slide {
   padding: 0 10px;
 }
 
@@ -24396,16 +27455,18 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-md-primary .tab-button, .tabs-md-primary .core-tabs-bar > a,
+.tabs-md-primary .tab-button, .tabs-md-primary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-primary a.tab-slide,
 .tabs-md-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-primary a.tab-slide:hover:not(.disable-hover),
 .tabs-md-primary .tab-button[aria-selected=true],
-.tabs-md-primary .core-tabs-bar > a[aria-selected=true],
+.tabs-md-primary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-primary a[aria-selected=true].tab-slide,
 .tabs-md-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-primary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-primary a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24417,16 +27478,18 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-md-secondary .tab-button, .tabs-md-secondary .core-tabs-bar > a,
+.tabs-md-secondary .tab-button, .tabs-md-secondary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-secondary a.tab-slide,
 .tabs-md-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-secondary a.tab-slide:hover:not(.disable-hover),
 .tabs-md-secondary .tab-button[aria-selected=true],
-.tabs-md-secondary .core-tabs-bar > a[aria-selected=true],
+.tabs-md-secondary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-secondary a[aria-selected=true].tab-slide,
 .tabs-md-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-secondary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-secondary a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24438,16 +27501,18 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-md-danger .tab-button, .tabs-md-danger .core-tabs-bar > a,
+.tabs-md-danger .tab-button, .tabs-md-danger .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-danger a.tab-slide,
 .tabs-md-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-danger a.tab-slide:hover:not(.disable-hover),
 .tabs-md-danger .tab-button[aria-selected=true],
-.tabs-md-danger .core-tabs-bar > a[aria-selected=true],
+.tabs-md-danger .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-danger a[aria-selected=true].tab-slide,
 .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-danger .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-danger a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24459,16 +27524,18 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-md-light .tab-button, .tabs-md-light .core-tabs-bar > a,
+.tabs-md-light .tab-button, .tabs-md-light .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-light a.tab-slide,
 .tabs-md-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-light a.tab-slide:hover:not(.disable-hover),
 .tabs-md-light .tab-button[aria-selected=true],
-.tabs-md-light .core-tabs-bar > a[aria-selected=true],
+.tabs-md-light .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-light a[aria-selected=true].tab-slide,
 .tabs-md-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-light .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-light a[aria-selected=true].tab-slide .tab-button-icon {
   color: #000;
 }
 
@@ -24480,16 +27547,18 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-md-gray .tab-button, .tabs-md-gray .core-tabs-bar > a,
+.tabs-md-gray .tab-button, .tabs-md-gray .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-gray a.tab-slide,
 .tabs-md-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-gray a.tab-slide:hover:not(.disable-hover),
 .tabs-md-gray .tab-button[aria-selected=true],
-.tabs-md-gray .core-tabs-bar > a[aria-selected=true],
+.tabs-md-gray .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-gray a[aria-selected=true].tab-slide,
 .tabs-md-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-gray .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-gray a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24501,16 +27570,18 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-md-dark .tab-button, .tabs-md-dark .core-tabs-bar > a,
+.tabs-md-dark .tab-button, .tabs-md-dark .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-dark a.tab-slide,
 .tabs-md-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-dark a.tab-slide:hover:not(.disable-hover),
 .tabs-md-dark .tab-button[aria-selected=true],
-.tabs-md-dark .core-tabs-bar > a[aria-selected=true],
+.tabs-md-dark .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-dark a[aria-selected=true].tab-slide,
 .tabs-md-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-dark .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-dark a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24522,16 +27593,18 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-md-warning .tab-button, .tabs-md-warning .core-tabs-bar > a,
+.tabs-md-warning .tab-button, .tabs-md-warning .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-warning a.tab-slide,
 .tabs-md-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-warning a.tab-slide:hover:not(.disable-hover),
 .tabs-md-warning .tab-button[aria-selected=true],
-.tabs-md-warning .core-tabs-bar > a[aria-selected=true],
+.tabs-md-warning .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-warning a[aria-selected=true].tab-slide,
 .tabs-md-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-warning .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-warning a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24543,16 +27616,18 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-md-success .tab-button, .tabs-md-success .core-tabs-bar > a,
+.tabs-md-success .tab-button, .tabs-md-success .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-success a.tab-slide,
 .tabs-md-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-success a.tab-slide:hover:not(.disable-hover),
 .tabs-md-success .tab-button[aria-selected=true],
-.tabs-md-success .core-tabs-bar > a[aria-selected=true],
+.tabs-md-success .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-success a[aria-selected=true].tab-slide,
 .tabs-md-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-success .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-success a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24564,16 +27639,18 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-md-info .tab-button, .tabs-md-info .core-tabs-bar > a,
+.tabs-md-info .tab-button, .tabs-md-info .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-md-info a.tab-slide,
 .tabs-md-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-md-info a.tab-slide:hover:not(.disable-hover),
 .tabs-md-info .tab-button[aria-selected=true],
-.tabs-md-info .core-tabs-bar > a[aria-selected=true],
+.tabs-md-info .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-md-info a[aria-selected=true].tab-slide,
 .tabs-md-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md-info .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-md-info a[aria-selected=true].tab-slide .tab-button-icon {
   color: #fff;
 }
 
@@ -24585,7 +27662,7 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-wp .tab-button, .tabs-wp .core-tabs-bar > a {
+.tabs-wp .tab-button, .tabs-wp .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp a.tab-slide {
   border-radius: 0;
   min-height: 4.8rem;
   border-bottom: 2px solid transparent;
@@ -24597,21 +27674,21 @@ ion-spinner.spinner-paused svg {
   padding: 12px 10px 5px;
 }
 
-.tabs-wp .tab-button[aria-selected=true], .tabs-wp .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp .tab-button[aria-selected=true], .tabs-wp .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-wp a[aria-selected=true].tab-slide {
   border-bottom-color: #f98012;
   color: #f98012;
 }
 
-.tabs-wp .tab-button.activated, .tabs-wp .core-tabs-bar > a.activated {
+.tabs-wp .tab-button.activated, .tabs-wp .core-tabs-bar a.activated.tab-slide, .core-tabs-bar .tabs-wp a.activated.tab-slide {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a {
+.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp[tabsPlacement=bottom] a.tab-slide {
   border-top: 2px solid transparent;
   border-bottom-width: 0;
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar .tabs-wp[tabsPlacement=bottom] a[aria-selected=true].tab-slide {
   border-top-color: #f98012;
 }
 
@@ -24626,48 +27703,51 @@ ion-spinner.spinner-paused svg {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar .tabs-wp a[aria-selected=true].tab-slide .tab-button-icon {
   color: #f98012;
 }
 
-.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a {
+.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp[tabsLayout=icon-bottom] a.tab-slide {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp[tabsLayout=icon-right] a.tab-slide,
 .tabs-wp[tabsLayout=icon-left] .tab-button,
-.tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-left] .core-tabs-bar a.tab-slide, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-left] a.tab-slide,
 .tabs-wp[tabsLayout=icon-end] .tab-button,
-.tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-end] .core-tabs-bar a.tab-slide, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-end] a.tab-slide,
 .tabs-wp[tabsLayout=icon-start] .tab-button,
-.tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a {
+.tabs-wp[tabsLayout=icon-start] .core-tabs-bar a.tab-slide, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-start] a.tab-slide {
   padding-bottom: 10px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-wp[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
+.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar .tabs-wp[tabsLayout=icon-right] a.tab-slide ion-icon,
 .tabs-wp[tabsLayout=icon-left] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-left] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a .fa.icon,
+.tabs-wp[tabsLayout=icon-left] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-left] a.tab-slide ion-icon,
 .tabs-wp[tabsLayout=icon-end] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-end] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a .fa.icon,
+.tabs-wp[tabsLayout=icon-end] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-end] a.tab-slide ion-icon,
 .tabs-wp[tabsLayout=icon-start] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-start] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a .fa.icon {
+.tabs-wp[tabsLayout=icon-start] .core-tabs-bar a.tab-slide ion-icon, .core-tabs-bar
+.tabs-wp[tabsLayout=icon-start] a.tab-slide ion-icon {
   min-width: 24px;
 }
 
-.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp[tabsLayout=icon-hide] a.tab-slide,
 .tabs-wp[tabsLayout=title-hide] .tab-button,
-.tabs-wp[tabsLayout=title-hide] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=title-hide] .core-tabs-bar a.tab-slide, .core-tabs-bar
+.tabs-wp[tabsLayout=title-hide] a.tab-slide,
 .tabs-wp .tab-button.icon-only,
-.tabs-wp .core-tabs-bar > a.icon-only,
+.tabs-wp .core-tabs-bar a.icon-only.tab-slide, .core-tabs-bar
+.tabs-wp a.icon-only.tab-slide,
 .tabs-wp .tab-button.has-title-only,
-.tabs-wp .core-tabs-bar > a.has-title-only {
+.tabs-wp .core-tabs-bar a.has-title-only.tab-slide, .core-tabs-bar
+.tabs-wp a.has-title-only.tab-slide {
   padding: 6px 10px;
 }
 
@@ -24675,18 +27755,21 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-wp-primary .tab-button, .tabs-wp-primary .core-tabs-bar > a,
+.tabs-wp-primary .tab-button, .tabs-wp-primary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-primary a.tab-slide,
 .tabs-wp-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-primary a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-primary .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-primary a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-primary .tab-button[aria-selected=true],
-.tabs-wp-primary .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-primary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-primary a[aria-selected=true].tab-slide,
 .tabs-wp-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-primary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-primary a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24695,18 +27778,21 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-wp-secondary .tab-button, .tabs-wp-secondary .core-tabs-bar > a,
+.tabs-wp-secondary .tab-button, .tabs-wp-secondary .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-secondary a.tab-slide,
 .tabs-wp-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-secondary a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-secondary .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-secondary a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-secondary .tab-button[aria-selected=true],
-.tabs-wp-secondary .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-secondary .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-secondary a[aria-selected=true].tab-slide,
 .tabs-wp-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-secondary .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-secondary a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24715,18 +27801,21 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-wp-danger .tab-button, .tabs-wp-danger .core-tabs-bar > a,
+.tabs-wp-danger .tab-button, .tabs-wp-danger .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-danger a.tab-slide,
 .tabs-wp-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-danger a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-danger .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-danger a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-danger .tab-button[aria-selected=true],
-.tabs-wp-danger .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-danger .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-danger a[aria-selected=true].tab-slide,
 .tabs-wp-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-danger .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-danger a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24735,18 +27824,21 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-wp-light .tab-button, .tabs-wp-light .core-tabs-bar > a,
+.tabs-wp-light .tab-button, .tabs-wp-light .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-light a.tab-slide,
 .tabs-wp-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-light a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-light .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-light a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-light .tab-button[aria-selected=true],
-.tabs-wp-light .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-light .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-light a[aria-selected=true].tab-slide,
 .tabs-wp-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-light .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-light a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #000;
   color: #000;
 }
@@ -24755,18 +27847,21 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-wp-gray .tab-button, .tabs-wp-gray .core-tabs-bar > a,
+.tabs-wp-gray .tab-button, .tabs-wp-gray .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-gray a.tab-slide,
 .tabs-wp-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-gray a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-gray .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-gray a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-gray .tab-button[aria-selected=true],
-.tabs-wp-gray .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-gray .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-gray a[aria-selected=true].tab-slide,
 .tabs-wp-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-gray .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-gray a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24775,18 +27870,21 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-wp-dark .tab-button, .tabs-wp-dark .core-tabs-bar > a,
+.tabs-wp-dark .tab-button, .tabs-wp-dark .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-dark a.tab-slide,
 .tabs-wp-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-dark a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-dark .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-dark a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-dark .tab-button[aria-selected=true],
-.tabs-wp-dark .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-dark .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-dark a[aria-selected=true].tab-slide,
 .tabs-wp-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-dark .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-dark a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24795,18 +27893,21 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-wp-warning .tab-button, .tabs-wp-warning .core-tabs-bar > a,
+.tabs-wp-warning .tab-button, .tabs-wp-warning .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-warning a.tab-slide,
 .tabs-wp-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-warning a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-warning .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-warning a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-warning .tab-button[aria-selected=true],
-.tabs-wp-warning .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-warning .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-warning a[aria-selected=true].tab-slide,
 .tabs-wp-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-warning .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-warning a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24815,18 +27916,21 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-wp-success .tab-button, .tabs-wp-success .core-tabs-bar > a,
+.tabs-wp-success .tab-button, .tabs-wp-success .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-success a.tab-slide,
 .tabs-wp-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-success a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-success .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-success a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-success .tab-button[aria-selected=true],
-.tabs-wp-success .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-success .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-success a[aria-selected=true].tab-slide,
 .tabs-wp-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-success .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-success a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -24835,18 +27939,21 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-wp-info .tab-button, .tabs-wp-info .core-tabs-bar > a,
+.tabs-wp-info .tab-button, .tabs-wp-info .core-tabs-bar a.tab-slide, .core-tabs-bar .tabs-wp-info a.tab-slide,
 .tabs-wp-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info .core-tabs-bar a.tab-slide:hover:not(.disable-hover), .core-tabs-bar .tabs-wp-info a.tab-slide:hover:not(.disable-hover),
 .tabs-wp-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-info .core-tabs-bar a.tab-slide:hover:not(.disable-hover) .tab-button-icon, .core-tabs-bar
+.tabs-wp-info a.tab-slide:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-info .tab-button[aria-selected=true],
-.tabs-wp-info .core-tabs-bar > a[aria-selected=true],
+.tabs-wp-info .core-tabs-bar a[aria-selected=true].tab-slide, .core-tabs-bar
+.tabs-wp-info a[aria-selected=true].tab-slide,
 .tabs-wp-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp-info .core-tabs-bar a[aria-selected=true].tab-slide .tab-button-icon, .core-tabs-bar
+.tabs-wp-info a[aria-selected=true].tab-slide .tab-button-icon {
   border-color: #fff;
   color: #fff;
 }
@@ -25750,14 +28857,14 @@ ion-navbar.toolbar {
   opacity: .4;
 }
 
-.bar-button-ios.bar-button-icon-start ion-icon, .bar-button-ios.bar-button-icon-start .fa.icon {
+.bar-button-ios.bar-button-icon-start ion-icon {
   padding-right: 0.3em;
   font-size: 1.4em;
   line-height: .67;
   pointer-events: none;
 }
 
-.bar-button-ios.bar-button-icon-end ion-icon, .bar-button-ios.bar-button-icon-end .fa.icon {
+.bar-button-ios.bar-button-icon-end ion-icon {
   padding-left: 0.4em;
   font-size: 1.4em;
   line-height: .67;
@@ -25769,7 +28876,7 @@ ion-navbar.toolbar {
   min-width: .9em;
 }
 
-.bar-button-ios[icon-only] ion-icon, .bar-button-ios[icon-only] .fa.icon {
+.bar-button-ios[icon-only] ion-icon {
   padding: 0 0.1em;
   font-size: 1.8em;
   line-height: .67;
@@ -25811,7 +28918,7 @@ ion-navbar.toolbar {
   min-width: 36px;
 }
 
-.bar-button-menutoggle-ios ion-icon, .bar-button-menutoggle-ios .fa.icon {
+.bar-button-menutoggle-ios ion-icon {
   padding: 0 6px;
   font-size: 2.8rem;
 }
@@ -29703,14 +32810,14 @@ ion-navbar.toolbar {
   background-color: #ebebeb;
 }
 
-.bar-button-md.bar-button-icon-start ion-icon, .bar-button-md.bar-button-icon-start .fa.icon {
+.bar-button-md.bar-button-icon-start ion-icon {
   padding-right: 0.3em;
   font-size: 1.4em;
   line-height: .67;
   pointer-events: none;
 }
 
-.bar-button-md.bar-button-icon-end ion-icon, .bar-button-md.bar-button-icon-end .fa.icon {
+.bar-button-md.bar-button-icon-end ion-icon {
   padding-left: 0.4em;
   font-size: 1.4em;
   line-height: .67;
@@ -29721,7 +32828,7 @@ ion-navbar.toolbar {
   padding: 0;
 }
 
-.bar-button-md[icon-only] ion-icon, .bar-button-md[icon-only] .fa.icon {
+.bar-button-md[icon-only] ion-icon {
   padding: 0 0.1em;
   min-width: 28px;
   font-size: 1.8em;
@@ -29755,7 +32862,7 @@ ion-navbar.toolbar {
   min-width: 44px;
 }
 
-.bar-button-menutoggle-md ion-icon, .bar-button-menutoggle-md .fa.icon {
+.bar-button-menutoggle-md ion-icon {
   padding: 0 6px;
   font-size: 2.4rem;
 }
@@ -33434,14 +36541,14 @@ ion-navbar.toolbar {
   background-color: #ebebeb;
 }
 
-.bar-button-wp.bar-button-icon-start ion-icon, .bar-button-wp.bar-button-icon-start .fa.icon {
+.bar-button-wp.bar-button-icon-start ion-icon {
   padding-right: 0.3em;
   font-size: 1.4em;
   line-height: .67;
   pointer-events: none;
 }
 
-.bar-button-wp.bar-button-icon-end ion-icon, .bar-button-wp.bar-button-icon-end .fa.icon {
+.bar-button-wp.bar-button-icon-end ion-icon {
   padding-left: 0.4em;
   font-size: 1.4em;
   line-height: .67;
@@ -33452,7 +36559,7 @@ ion-navbar.toolbar {
   padding: 0;
 }
 
-.bar-button-wp[icon-only] ion-icon, .bar-button-wp[icon-only] .fa.icon {
+.bar-button-wp[icon-only] ion-icon {
   padding: 0 0.1em;
   min-width: 28px;
   font-size: 1.8em;
@@ -33486,7 +36593,7 @@ ion-navbar.toolbar {
   min-width: 44px;
 }
 
-.bar-button-menutoggle-wp ion-icon, .bar-button-menutoggle-wp .fa.icon {
+.bar-button-menutoggle-wp ion-icon {
   padding: 0 6px;
   font-size: 2.4rem;
 }
@@ -37707,6 +40814,89 @@ addon-mod-wiki-subwiki-picker .item.addon-mod_wiki-subwiki-selected .icon {
   font-size: 24px;
 }
 
+page-addon-mod-wiki-edit .addon-mod_wiki-wrongversionlock .label {
+  margin: 0;
+}
+
+addon-mod-workshop-submission p.addon-overriden-grade,
+addon-mod-workshop-submission-page p.addon-overriden-grade,
+addon-mod-workshop-assessment p.addon-overriden-grade,
+addon-mod-workshop-assessment-page p.addon-overriden-grade {
+  color: #5e8100;
+}
+
+addon-mod-workshop-submission p.addon-has-overriden-grade,
+addon-mod-workshop-submission-page p.addon-has-overriden-grade,
+addon-mod-workshop-assessment p.addon-has-overriden-grade,
+addon-mod-workshop-assessment-page p.addon-has-overriden-grade {
+  color: #cb3d4d;
+  text-decoration: line-through;
+}
+
+addon-mod-workshop-assessment .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+addon-mod-workshop-assessment .item-ios.item-block .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+addon-mod-workshop-assessment .item-wp.item-block .item-inner {
+  border-bottom: 1px solid transparent;
+}
+
+addon-mod-workshop-assessment:last-child .item .item-inner {
+  border-bottom: 0;
+}
+
+.card.with-borders addon-mod-workshop-assessment .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+.card.with-borders addon-mod-workshop-assessment .item-ios.item-block .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+.card.with-borders addon-mod-workshop-assessment .item-wp.item-block .item-inner {
+  border-bottom: 1px solid transparent;
+}
+
+.card.with-borders addon-mod-workshop-assessment:last-child .item .item-inner {
+  border-bottom: 0;
+}
+
+addon-mod-workshop-submission .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+addon-mod-workshop-submission .item-ios.item-block .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+addon-mod-workshop-submission .item-wp.item-block .item-inner {
+  border-bottom: 1px solid transparent;
+}
+
+addon-mod-workshop-submission:last-child .item .item-inner {
+  border-bottom: 0;
+}
+
+.card.with-borders addon-mod-workshop-submission .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+.card.with-borders addon-mod-workshop-submission .item-ios.item-block .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+.card.with-borders addon-mod-workshop-submission .item-wp.item-block .item-inner {
+  border-bottom: 1px solid transparent;
+}
+
+.card.with-borders addon-mod-workshop-submission:last-child .item .item-inner {
+  border-bottom: 0;
+}
+
 page-addon-notifications-settings .list-header {
   margin-bottom: 0;
   border-top: 0;
@@ -38412,7 +41602,7 @@ audio.core-media-adapt-width {
   font-size: 24px;
 }
 
-.core-image-viewer-icon ion-icon, .core-image-viewer-icon .fa.icon {
+.core-image-viewer-icon ion-icon {
   font-size: 24px;
 }
 
@@ -38491,6 +41681,10 @@ ion-col ion-select {
 ion-col ion-select .select-text {
   white-space: normal;
   text-align: right;
+}
+
+.core-button-select ion-icon:last-child {
+  margin-left: 5px;
 }
 
 .core-fileuploader-file-handler {
@@ -38725,7 +41919,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-primary-card[icon-start] ion-icon, .core-primary-card[icon-start] .fa.icon {
+.core-primary-card[icon-start] ion-icon {
   color: #f98012;
   position: absolute;
   top: 0;
@@ -38746,7 +41940,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #f98012 !important;
 }
 
-.core-primary-item ion-icon, .core-primary-item .fa.icon {
+.core-primary-item ion-icon {
   color: #f98012;
 }
 
@@ -38771,7 +41965,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-secondary-card[icon-start] ion-icon, .core-secondary-card[icon-start] .fa.icon {
+.core-secondary-card[icon-start] ion-icon {
   color: #007982;
   position: absolute;
   top: 0;
@@ -38792,7 +41986,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #007982 !important;
 }
 
-.core-secondary-item ion-icon, .core-secondary-item .fa.icon {
+.core-secondary-item ion-icon {
   color: #007982;
 }
 
@@ -38817,7 +42011,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-danger-card[icon-start] ion-icon, .core-danger-card[icon-start] .fa.icon {
+.core-danger-card[icon-start] ion-icon {
   color: #cb3d4d;
   position: absolute;
   top: 0;
@@ -38838,7 +42032,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #cb3d4d !important;
 }
 
-.core-danger-item ion-icon, .core-danger-item .fa.icon {
+.core-danger-item ion-icon {
   color: #cb3d4d;
 }
 
@@ -38863,7 +42057,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-light-card[icon-start] ion-icon, .core-light-card[icon-start] .fa.icon {
+.core-light-card[icon-start] ion-icon {
   color: #f5f5f5;
   position: absolute;
   top: 0;
@@ -38884,7 +42078,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #f5f5f5 !important;
 }
 
-.core-light-item ion-icon, .core-light-item .fa.icon {
+.core-light-item ion-icon {
   color: #f5f5f5;
 }
 
@@ -38909,7 +42103,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-gray-card[icon-start] ion-icon, .core-gray-card[icon-start] .fa.icon {
+.core-gray-card[icon-start] ion-icon {
   color: #9e9e9e;
   position: absolute;
   top: 0;
@@ -38930,7 +42124,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #9e9e9e !important;
 }
 
-.core-gray-item ion-icon, .core-gray-item .fa.icon {
+.core-gray-item ion-icon {
   color: #9e9e9e;
 }
 
@@ -38955,7 +42149,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-dark-card[icon-start] ion-icon, .core-dark-card[icon-start] .fa.icon {
+.core-dark-card[icon-start] ion-icon {
   color: #3a3a3a;
   position: absolute;
   top: 0;
@@ -38976,7 +42170,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #3a3a3a !important;
 }
 
-.core-dark-item ion-icon, .core-dark-item .fa.icon {
+.core-dark-item ion-icon {
   color: #3a3a3a;
 }
 
@@ -39001,7 +42195,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-warning-card[icon-start] ion-icon, .core-warning-card[icon-start] .fa.icon {
+.core-warning-card[icon-start] ion-icon {
   color: #fbad1a;
   position: absolute;
   top: 0;
@@ -39022,7 +42216,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #fbad1a !important;
 }
 
-.core-warning-item ion-icon, .core-warning-item .fa.icon {
+.core-warning-item ion-icon {
   color: #fbad1a;
 }
 
@@ -39047,7 +42241,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-success-card[icon-start] ion-icon, .core-success-card[icon-start] .fa.icon {
+.core-success-card[icon-start] ion-icon {
   color: #5e8100;
   position: absolute;
   top: 0;
@@ -39068,7 +42262,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #5e8100 !important;
 }
 
-.core-success-item ion-icon, .core-success-item .fa.icon {
+.core-success-item ion-icon {
   color: #5e8100;
 }
 
@@ -39093,7 +42287,7 @@ canvas[core-chart] {
   position: relative;
 }
 
-.core-info-card[icon-start] ion-icon, .core-info-card[icon-start] .fa.icon {
+.core-info-card[icon-start] ion-icon {
   color: #0064d2;
   position: absolute;
   top: 0;
@@ -39114,7 +42308,7 @@ canvas[core-chart] {
   border-bottom: 3px solid #0064d2 !important;
 }
 
-.core-info-item ion-icon, .core-info-item .fa.icon {
+.core-info-item ion-icon {
   color: #0064d2;
 }
 
@@ -39162,90 +42356,65 @@ canvas[core-chart] {
   height: 100% !important;
 }
 
+.has-fab .scroll-content {
+  padding-bottom: 56px;
+}
+
+.scroll-content ion-fab {
+  position: fixed;
+  margin-bottom: 56px;
+}
+
 .ion-page {
   background-color: #eeeeee;
 }
 
-/** This file is intended to translate fontawesome to ionicons while the font is not supported */
-/*.fa {
-    font-size: $button-icon-size;
-    width: $button-icon-size;
-    height: $button-icon-size;
-}*/
-/** Fixed width */
-.fa-fw {
-  width: 1.28571em;
-  text-align: center;
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
 }
 
-/** Uncomment for dev purposes, it will show an asterisk in red where a missing icon is */
-/*.fa:before {
-    color: red !important;
-    content: $ionicon-var-asterisk;
-}*/
-/** Icons translation */
-.md .fa-search-plus:before {
-  content: "\f375";
+.embed-responsive::before {
+  display: block;
+  content: "";
 }
 
-.md .fa-cog:before {
-  content: "\f2cf";
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.md .fa-trash:before {
-  content: "\f398";
+.embed-responsive iframe iframe {
+  width: 100%;
+  height: 100%;
 }
 
-.md .fa-thumbs-up:before {
-  content: "\f392";
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%;
 }
 
-.md .fa-thumbs-down:before {
-  content: "\f391";
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
 }
 
-.md .fa-ban:before {
-  content: "\f367";
+.embed-responsive-4by3::before {
+  padding-top: 75%;
 }
 
-.md .fa-remove:before {
-  content: "\f2c0";
-}
-
-.md .fa-check:before {
-  content: "\f2bc";
-}
-
-.ios .fa-search-plus:before, .wp .fa-search-plus:before {
-  content: "\f4a5";
-}
-
-.ios .fa-cog:before, .wp .fa-cog:before {
-  content: "\f412";
-}
-
-.ios .fa-trash:before, .wp .fa-trash:before {
-  content: "\f4c5";
-}
-
-.ios .fa-thumbs-up:before, .wp .fa-thumbs-up:before {
-  content: "\f256";
-}
-
-.ios .fa-thumbs-down:before, .wp .fa-thumbs-down:before {
-  content: "\f254";
-}
-
-.ios .fa-ban:before, .wp .fa-ban:before {
-  content: "\f1fb";
-}
-
-.ios .fa-remove:before, .wp .fa-remove:before {
-  content: "\f406";
-}
-
-.ios .fa-check:before, .wp .fa-check:before {
-  content: "\f3ff";
+.embed-responsive-1by1::before {
+  padding-top: 100%;
 }
 
 .button-ios {
@@ -39275,7 +42444,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-primary-card[icon-start] ion-icon, .ios .core-primary-card[icon-start] .fa.icon {
+.ios .core-primary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39283,7 +42452,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-secondary-card[icon-start] ion-icon, .ios .core-secondary-card[icon-start] .fa.icon {
+.ios .core-secondary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39291,7 +42460,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-danger-card[icon-start] ion-icon, .ios .core-danger-card[icon-start] .fa.icon {
+.ios .core-danger-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39299,7 +42468,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-light-card[icon-start] ion-icon, .ios .core-light-card[icon-start] .fa.icon {
+.ios .core-light-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39307,7 +42476,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-gray-card[icon-start] ion-icon, .ios .core-gray-card[icon-start] .fa.icon {
+.ios .core-gray-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39315,7 +42484,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-dark-card[icon-start] ion-icon, .ios .core-dark-card[icon-start] .fa.icon {
+.ios .core-dark-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39323,7 +42492,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-warning-card[icon-start] ion-icon, .ios .core-warning-card[icon-start] .fa.icon {
+.ios .core-warning-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39331,7 +42500,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-success-card[icon-start] ion-icon, .ios .core-success-card[icon-start] .fa.icon {
+.ios .core-success-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39339,7 +42508,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.ios .core-info-card[icon-start] ion-icon, .ios .core-info-card[icon-start] .fa.icon {
+.ios .core-info-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39412,6 +42581,14 @@ canvas[core-chart] {
   padding-left: 241px;
 }
 
+.card-ios.with-borders .item-ios.item-block .item-inner, .ios .with-borders.core-primary-card .item-ios.item-block .item-inner, .ios .with-borders.core-secondary-card .item-ios.item-block .item-inner, .ios .with-borders.core-danger-card .item-ios.item-block .item-inner, .ios .with-borders.core-light-card .item-ios.item-block .item-inner, .ios .with-borders.core-gray-card .item-ios.item-block .item-inner, .ios .with-borders.core-dark-card .item-ios.item-block .item-inner, .ios .with-borders.core-warning-card .item-ios.item-block .item-inner, .ios .with-borders.core-success-card .item-ios.item-block .item-inner, .ios .with-borders.core-info-card .item-ios.item-block .item-inner {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+.card-ios.with-borders .item-ios:last-child .item-inner, .ios .with-borders.core-primary-card .item-ios:last-child .item-inner, .ios .with-borders.core-secondary-card .item-ios:last-child .item-inner, .ios .with-borders.core-danger-card .item-ios:last-child .item-inner, .ios .with-borders.core-light-card .item-ios:last-child .item-inner, .ios .with-borders.core-gray-card .item-ios:last-child .item-inner, .ios .with-borders.core-dark-card .item-ios:last-child .item-inner, .ios .with-borders.core-warning-card .item-ios:last-child .item-inner, .ios .with-borders.core-success-card .item-ios:last-child .item-inner, .ios .with-borders.core-info-card .item-ios:last-child .item-inner {
+  border-bottom: 0;
+}
+
 .button-md {
   min-height: 3.6rem;
 }
@@ -39437,7 +42614,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-primary-card[icon-start] ion-icon, .md .core-primary-card[icon-start] .fa.icon {
+.md .core-primary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39445,7 +42622,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-secondary-card[icon-start] ion-icon, .md .core-secondary-card[icon-start] .fa.icon {
+.md .core-secondary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39453,7 +42630,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-danger-card[icon-start] ion-icon, .md .core-danger-card[icon-start] .fa.icon {
+.md .core-danger-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39461,7 +42638,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-light-card[icon-start] ion-icon, .md .core-light-card[icon-start] .fa.icon {
+.md .core-light-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39469,7 +42646,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-gray-card[icon-start] ion-icon, .md .core-gray-card[icon-start] .fa.icon {
+.md .core-gray-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39477,7 +42654,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-dark-card[icon-start] ion-icon, .md .core-dark-card[icon-start] .fa.icon {
+.md .core-dark-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39485,7 +42662,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-warning-card[icon-start] ion-icon, .md .core-warning-card[icon-start] .fa.icon {
+.md .core-warning-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39493,7 +42670,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-success-card[icon-start] ion-icon, .md .core-success-card[icon-start] .fa.icon {
+.md .core-success-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39501,7 +42678,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.md .core-info-card[icon-start] ion-icon, .md .core-info-card[icon-start] .fa.icon {
+.md .core-info-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39643,6 +42820,14 @@ canvas[core-chart] {
   padding-left: 241px;
 }
 
+.card-md.with-borders .item-md.item-block .item-inner, .md .with-borders.core-primary-card .item-md.item-block .item-inner, .md .with-borders.core-secondary-card .item-md.item-block .item-inner, .md .with-borders.core-danger-card .item-md.item-block .item-inner, .md .with-borders.core-light-card .item-md.item-block .item-inner, .md .with-borders.core-gray-card .item-md.item-block .item-inner, .md .with-borders.core-dark-card .item-md.item-block .item-inner, .md .with-borders.core-warning-card .item-md.item-block .item-inner, .md .with-borders.core-success-card .item-md.item-block .item-inner, .md .with-borders.core-info-card .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+.card-md.with-borders .item-md:last-child .item-inner, .md .with-borders.core-primary-card .item-md:last-child .item-inner, .md .with-borders.core-secondary-card .item-md:last-child .item-inner, .md .with-borders.core-danger-card .item-md:last-child .item-inner, .md .with-borders.core-light-card .item-md:last-child .item-inner, .md .with-borders.core-gray-card .item-md:last-child .item-inner, .md .with-borders.core-dark-card .item-md:last-child .item-inner, .md .with-borders.core-warning-card .item-md:last-child .item-inner, .md .with-borders.core-success-card .item-md:last-child .item-inner, .md .with-borders.core-info-card .item-md:last-child .item-inner {
+  border-bottom: 0;
+}
+
 .button-wp {
   min-height: 3.6rem;
 }
@@ -39668,7 +42853,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-primary-card[icon-start] ion-icon, .wp .core-primary-card[icon-start] .fa.icon {
+.wp .core-primary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39676,7 +42861,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-secondary-card[icon-start] ion-icon, .wp .core-secondary-card[icon-start] .fa.icon {
+.wp .core-secondary-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39684,7 +42869,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-danger-card[icon-start] ion-icon, .wp .core-danger-card[icon-start] .fa.icon {
+.wp .core-danger-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39692,7 +42877,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-light-card[icon-start] ion-icon, .wp .core-light-card[icon-start] .fa.icon {
+.wp .core-light-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39700,7 +42885,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-gray-card[icon-start] ion-icon, .wp .core-gray-card[icon-start] .fa.icon {
+.wp .core-gray-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39708,7 +42893,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-dark-card[icon-start] ion-icon, .wp .core-dark-card[icon-start] .fa.icon {
+.wp .core-dark-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39716,7 +42901,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-warning-card[icon-start] ion-icon, .wp .core-warning-card[icon-start] .fa.icon {
+.wp .core-warning-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39724,7 +42909,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-success-card[icon-start] ion-icon, .wp .core-success-card[icon-start] .fa.icon {
+.wp .core-success-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39732,7 +42917,7 @@ canvas[core-chart] {
   padding-left: 52px;
 }
 
-.wp .core-info-card[icon-start] ion-icon, .wp .core-info-card[icon-start] .fa.icon {
+.wp .core-info-card[icon-start] ion-icon {
   left: 16px;
 }
 
@@ -39805,9 +42990,16 @@ canvas[core-chart] {
   padding-left: 241px;
 }
 
-core-context-menu-popover .item-md ion-icon[item-start] + .item-inner, core-context-menu-popover .item-md [item-start].fa.icon + .item-inner,
-core-context-menu-popover .item-md ion-icon[item-start] + .item-input,
-core-context-menu-popover .item-md [item-start].fa.icon + .item-input {
+.card-wp.with-borders .item-wp.item-block .item-inner, .wp .with-borders.core-primary-card .item-wp.item-block .item-inner, .wp .with-borders.core-secondary-card .item-wp.item-block .item-inner, .wp .with-borders.core-danger-card .item-wp.item-block .item-inner, .wp .with-borders.core-light-card .item-wp.item-block .item-inner, .wp .with-borders.core-gray-card .item-wp.item-block .item-inner, .wp .with-borders.core-dark-card .item-wp.item-block .item-inner, .wp .with-borders.core-warning-card .item-wp.item-block .item-inner, .wp .with-borders.core-success-card .item-wp.item-block .item-inner, .wp .with-borders.core-info-card .item-wp.item-block .item-inner {
+  border-bottom: 1px solid transparent;
+}
+
+.card-wp.with-borders .item-wp:last-child .item-inner, .wp .with-borders.core-primary-card .item-wp:last-child .item-inner, .wp .with-borders.core-secondary-card .item-wp:last-child .item-inner, .wp .with-borders.core-danger-card .item-wp:last-child .item-inner, .wp .with-borders.core-light-card .item-wp:last-child .item-inner, .wp .with-borders.core-gray-card .item-wp:last-child .item-inner, .wp .with-borders.core-dark-card .item-wp:last-child .item-inner, .wp .with-borders.core-warning-card .item-wp:last-child .item-inner, .wp .with-borders.core-success-card .item-wp:last-child .item-inner, .wp .with-borders.core-info-card .item-wp:last-child .item-inner {
+  border-bottom: 0;
+}
+
+core-context-menu-popover .item-md ion-icon[item-start] + .item-inner,
+core-context-menu-popover .item-md ion-icon[item-start] + .item-input {
   margin-left: 5px;
 }
 
@@ -39823,6 +43015,7 @@ core-empty-box .core-empty-box {
   margin: 0;
   padding: 0;
   clear: both;
+  pointer-events: none;
 }
 
 core-empty-box .core-empty-box .core-empty-box-content {
@@ -39831,6 +43024,7 @@ core-empty-box .core-empty-box .core-empty-box-content {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  pointer-events: auto;
 }
 
 core-empty-box .core-empty-box.core-empty-box-inline {
@@ -39878,6 +43072,42 @@ core-empty-box .core-empty-box p {
 
 .card-wp core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-primary-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-secondary-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-danger-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-light-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-gray-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-dark-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-warning-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-success-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-info-card core-file + core-file > .item-wp.item-block > .item-inner {
   border-top: 1px solid transparent;
+}
+
+.fa-primary {
+  color: #f98012;
+}
+
+.fa-secondary {
+  color: #007982;
+}
+
+.fa-danger {
+  color: #cb3d4d;
+}
+
+.fa-light {
+  color: #f5f5f5;
+}
+
+.fa-gray {
+  color: #9e9e9e;
+}
+
+.fa-dark {
+  color: #3a3a3a;
+}
+
+.fa-warning {
+  color: #fbad1a;
+}
+
+.fa-success {
+  color: #5e8100;
+}
+
+.fa-info {
+  color: #0064d2;
 }
 
 core-iframe > div {
@@ -40343,6 +43573,10 @@ core-rich-text-editor .core-rte-editor:empty:before {
   font-weight: bold;
 }
 
+core-rich-text-editor .core-rte-editor *:empty:after {
+  content: '\200B';
+}
+
 core-rich-text-editor .core-rte-editor ul {
   list-style-type: disc;
 }
@@ -40589,34 +43823,63 @@ core-split-view ion-header {
   background: #ffffff;
 }
 
-.core-tabs-bar > a {
+.core-tabs-bar .row, .core-tabs-bar .addon-data-contents tr, .addon-data-contents .core-tabs-bar tr {
+  width: 100%;
+}
+
+.core-tabs-bar a.tab-slide {
   background: #ffffff;
   color: #9e9e9e !important;
   font-size: 1.6rem;
   border: 0;
 }
 
-.core-tabs-bar > a[aria-selected=true] {
+.core-tabs-bar a.tab-slide[aria-selected=true] {
   color: #f98012 !important;
   border: 0 !important;
   border-bottom: 2px solid #f98012 !important;
 }
 
-.md .core-tabs-bar > a {
+.core-tabs-bar ion-col {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.core-tabs-bar ion-col.col-with-arrow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.core-tabs-bar ion-col.col-with-arrow ion-icon {
+  color: #ccc;
+}
+
+.md .core-tabs-bar a.tab-slide {
   min-height: 5.6rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.ios .core-tabs-bar > a {
+.ios .core-tabs-bar a.tab-slide {
   max-width: 240px;
   min-height: 49px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   color: #ffffff;
 }
 
-.wp .core-tabs-bar > a {
+.wp .core-tabs-bar a.tab-slide {
   border-radius: 0;
   min-height: 4.8rem;
   border-bottom: 2px solid transparent;
@@ -40710,7 +43973,7 @@ core-timer .core-timer.core-timer-timeleft-0 {
   background-color: #cb3d4d;
 }
 
-core-timer .core-timer.core-timer-timeleft-0 label, core-timer .core-timer.core-timer-timeleft-0 span, core-timer .core-timer.core-timer-timeleft-0 ion-icon, core-timer .core-timer.core-timer-timeleft-0 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-0 label, core-timer .core-timer.core-timer-timeleft-0 span, core-timer .core-timer.core-timer-timeleft-0 ion-icon {
   color: #ffffff;
 }
 
@@ -40718,7 +43981,7 @@ core-timer .core-timer.core-timer-timeleft-1 {
   background-color: rgba(203, 61, 77, 0.933333);
 }
 
-core-timer .core-timer.core-timer-timeleft-1 label, core-timer .core-timer.core-timer-timeleft-1 span, core-timer .core-timer.core-timer-timeleft-1 ion-icon, core-timer .core-timer.core-timer-timeleft-1 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-1 label, core-timer .core-timer.core-timer-timeleft-1 span, core-timer .core-timer.core-timer-timeleft-1 ion-icon {
   color: #ffffff;
 }
 
@@ -40726,7 +43989,7 @@ core-timer .core-timer.core-timer-timeleft-2 {
   background-color: rgba(203, 61, 77, 0.866667);
 }
 
-core-timer .core-timer.core-timer-timeleft-2 label, core-timer .core-timer.core-timer-timeleft-2 span, core-timer .core-timer.core-timer-timeleft-2 ion-icon, core-timer .core-timer.core-timer-timeleft-2 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-2 label, core-timer .core-timer.core-timer-timeleft-2 span, core-timer .core-timer.core-timer-timeleft-2 ion-icon {
   color: #ffffff;
 }
 
@@ -40734,7 +43997,7 @@ core-timer .core-timer.core-timer-timeleft-3 {
   background-color: rgba(203, 61, 77, 0.8);
 }
 
-core-timer .core-timer.core-timer-timeleft-3 label, core-timer .core-timer.core-timer-timeleft-3 span, core-timer .core-timer.core-timer-timeleft-3 ion-icon, core-timer .core-timer.core-timer-timeleft-3 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-3 label, core-timer .core-timer.core-timer-timeleft-3 span, core-timer .core-timer.core-timer-timeleft-3 ion-icon {
   color: #ffffff;
 }
 
@@ -40742,7 +44005,7 @@ core-timer .core-timer.core-timer-timeleft-4 {
   background-color: rgba(203, 61, 77, 0.733333);
 }
 
-core-timer .core-timer.core-timer-timeleft-4 label, core-timer .core-timer.core-timer-timeleft-4 span, core-timer .core-timer.core-timer-timeleft-4 ion-icon, core-timer .core-timer.core-timer-timeleft-4 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-4 label, core-timer .core-timer.core-timer-timeleft-4 span, core-timer .core-timer.core-timer-timeleft-4 ion-icon {
   color: #ffffff;
 }
 
@@ -40750,7 +44013,7 @@ core-timer .core-timer.core-timer-timeleft-5 {
   background-color: rgba(203, 61, 77, 0.666667);
 }
 
-core-timer .core-timer.core-timer-timeleft-5 label, core-timer .core-timer.core-timer-timeleft-5 span, core-timer .core-timer.core-timer-timeleft-5 ion-icon, core-timer .core-timer.core-timer-timeleft-5 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-5 label, core-timer .core-timer.core-timer-timeleft-5 span, core-timer .core-timer.core-timer-timeleft-5 ion-icon {
   color: #ffffff;
 }
 
@@ -40758,7 +44021,7 @@ core-timer .core-timer.core-timer-timeleft-6 {
   background-color: rgba(203, 61, 77, 0.6);
 }
 
-core-timer .core-timer.core-timer-timeleft-6 label, core-timer .core-timer.core-timer-timeleft-6 span, core-timer .core-timer.core-timer-timeleft-6 ion-icon, core-timer .core-timer.core-timer-timeleft-6 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-6 label, core-timer .core-timer.core-timer-timeleft-6 span, core-timer .core-timer.core-timer-timeleft-6 ion-icon {
   color: #ffffff;
 }
 
@@ -40766,7 +44029,7 @@ core-timer .core-timer.core-timer-timeleft-7 {
   background-color: rgba(203, 61, 77, 0.533333);
 }
 
-core-timer .core-timer.core-timer-timeleft-7 label, core-timer .core-timer.core-timer-timeleft-7 span, core-timer .core-timer.core-timer-timeleft-7 ion-icon, core-timer .core-timer.core-timer-timeleft-7 .fa.icon {
+core-timer .core-timer.core-timer-timeleft-7 label, core-timer .core-timer.core-timer-timeleft-7 span, core-timer .core-timer.core-timer-timeleft-7 ion-icon {
   color: #ffffff;
 }
 
@@ -40807,6 +44070,27 @@ ion-badge.core-course-download-section-progress {
   float: left;
   margin-top: 12px;
   margin-right: 12px;
+}
+
+core-course-format .core-course-thumb {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+}
+
+core-course-format .core-course-thumb img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.core-section-select {
+  width: 100%;
 }
 
 core-course-module a.core-course-module-handler {
@@ -40976,10 +44260,67 @@ core-courses-course-progress ion-card.card, core-courses-course-progress .card.c
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb, core-courses-course-progress .card.core-primary-card .core-course-thumb, core-courses-course-progress .card.core-secondary-card .core-course-thumb, core-courses-course-progress .card.core-danger-card .core-course-thumb, core-courses-course-progress .card.core-light-card .core-course-thumb, core-courses-course-progress .card.core-gray-card .core-course-thumb, core-courses-course-progress .card.core-dark-card .core-course-thumb, core-courses-course-progress .card.core-warning-card .core-course-thumb, core-courses-course-progress .card.core-success-card .core-course-thumb, core-courses-course-progress .card.core-info-card .core-course-thumb {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-0, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-0 {
+  background: #81ecec;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-1, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-1 {
+  background: #74b9ff;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-2, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-2 {
+  background: #a29bfe;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-3, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-3 {
+  background: #dfe6e9;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-4, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-4 {
+  background: #00b894;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-5, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-5 {
+  background: #0984e3;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-6, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-6 {
+  background: #b2bec3;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-7, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-7 {
+  background: #fdcb6e;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-8, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-8 {
+  background: #fd79a8;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-primary-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-secondary-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-danger-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-light-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-gray-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-dark-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-warning-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-success-card .core-course-thumb.core-course-color-9, core-courses-course-progress .card.core-info-card .core-course-thumb.core-course-color-9 {
+  background: #6c5ce7;
+}
+
+core-courses-course-progress ion-card.card .core-course-thumb img, core-courses-course-progress .card.core-primary-card .core-course-thumb img, core-courses-course-progress .card.core-secondary-card .core-course-thumb img, core-courses-course-progress .card.core-danger-card .core-course-thumb img, core-courses-course-progress .card.core-light-card .core-course-thumb img, core-courses-course-progress .card.core-gray-card .core-course-thumb img, core-courses-course-progress .card.core-dark-card .core-course-thumb img, core-courses-course-progress .card.core-warning-card .core-course-thumb img, core-courses-course-progress .card.core-success-card .core-course-thumb img, core-courses-course-progress .card.core-info-card .core-course-thumb img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+core-courses-course-progress ion-card.card .core-course-link, core-courses-course-progress .card.core-primary-card .core-course-link, core-courses-course-progress .card.core-secondary-card .core-course-link, core-courses-course-progress .card.core-danger-card .core-course-link, core-courses-course-progress .card.core-light-card .core-course-link, core-courses-course-progress .card.core-gray-card .core-course-link, core-courses-course-progress .card.core-dark-card .core-course-link, core-courses-course-progress .card.core-warning-card .core-course-link, core-courses-course-progress .card.core-success-card .core-course-link, core-courses-course-progress .card.core-info-card .core-course-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 core-courses-course-progress ion-card.card .core-course-link .item-inner, core-courses-course-progress .card.core-primary-card .core-course-link .item-inner, core-courses-course-progress .card.core-secondary-card .core-course-link .item-inner, core-courses-course-progress .card.core-danger-card .core-course-link .item-inner, core-courses-course-progress .card.core-light-card .core-course-link .item-inner, core-courses-course-progress .card.core-gray-card .core-course-link .item-inner, core-courses-course-progress .card.core-dark-card .core-course-link .item-inner, core-courses-course-progress .card.core-warning-card .core-course-link .item-inner, core-courses-course-progress .card.core-success-card .core-course-link .item-inner, core-courses-course-progress .card.core-info-card .core-course-link .item-inner {
@@ -41037,6 +44378,23 @@ core-courses-course-progress .core-course-module-handler.item:last-child .item-i
 
 core-courses-course-progress .core-course-module-handler.item .item-heading:first-child {
   margin-top: 0;
+}
+
+page-core-courses-course-preview .core-course-thumb {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+}
+
+page-core-courses-course-preview .core-course-thumb img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
 }
 
 page-core-emulator-capture-media ion-content .core-av-wrapper {
@@ -41149,7 +44507,7 @@ core-grades-course .core-grades-table .core-grades-table-gradeitem img {
   height: 16px;
 }
 
-core-grades-course .core-grades-table .core-grades-table-gradeitem ion-icon, core-grades-course .core-grades-table .core-grades-table-gradeitem .fa.icon {
+core-grades-course .core-grades-table .core-grades-table-gradeitem ion-icon {
   color: #999999;
 }
 
@@ -41213,12 +44571,15 @@ page-core-login-forgotten-password .content {
   background: radial-gradient(white, #eeeeee);
 }
 
-page-core-login-init .core-bglogo {
+page-core-login-init .scroll-content {
   background-color: #ff5c00;
   /* Change this to add a bg image or change color */
   background: radial-gradient(#ff7600, #ff5c00);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+page-core-login-init .core-bglogo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -41314,7 +44675,7 @@ page-core-login-site-policy .card {
   height: 300px;
 }
 
-page-core-login-sites .item-button[icon-only] ion-icon, page-core-login-sites .item-button[icon-only] .fa.icon {
+page-core-login-sites .item-button[icon-only] ion-icon {
   font-size: 2.3em;
 }
 

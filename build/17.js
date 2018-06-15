@@ -1,16 +1,18 @@
 webpackJsonp([17],{
 
-/***/ 1826:
+/***/ 1874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSiteHomeIndexPageModule", function() { return CoreSiteHomeIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSettingsSynchronizationPageModule", function() { return CoreSettingsSynchronizationPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index__ = __webpack_require__(1945);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(882);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__synchronization__ = __webpack_require__(1998);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(71);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,37 +37,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreSiteHomeIndexPageModule = (function () {
-    function CoreSiteHomeIndexPageModule() {
+
+
+var CoreSettingsSynchronizationPageModule = /** @class */ (function () {
+    function CoreSettingsSynchronizationPageModule() {
     }
-    CoreSiteHomeIndexPageModule = __decorate([
+    CoreSettingsSynchronizationPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__index__["a" /* CoreSiteHomeIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_3__synchronization__["a" /* CoreSettingsSynchronizationPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreSiteHomeComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__index__["a" /* CoreSiteHomeIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__synchronization__["a" /* CoreSettingsSynchronizationPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ]
+            ],
         })
-    ], CoreSiteHomeIndexPageModule);
-    return CoreSiteHomeIndexPageModule;
+    ], CoreSettingsSynchronizationPageModule);
+    return CoreSettingsSynchronizationPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=synchronization.module.js.map
 
 /***/ }),
 
-/***/ 1945:
+/***/ 1998:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSiteHomeIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsSynchronizationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_course_providers_helper__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_constants__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_config__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_settings_providers_helper__ = __webpack_require__(936);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,27 +101,100 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
- * Page that displays site home index.
+ * Page that displays the synchronization settings.
  */
-var CoreSiteHomeIndexPage = (function () {
-    function CoreSiteHomeIndexPage(navParams, navCtrl, courseHelper, sitesProvider) {
-        var module = navParams.get('module');
-        if (module) {
-            courseHelper.openModule(navCtrl, module, sitesProvider.getCurrentSite().getSiteHomeId());
-        }
+var CoreSettingsSynchronizationPage = /** @class */ (function () {
+    function CoreSettingsSynchronizationPage(configProvider, eventsProvider, sitesProvider, domUtils, settingsHelper) {
+        var _this = this;
+        this.configProvider = configProvider;
+        this.eventsProvider = eventsProvider;
+        this.sitesProvider = sitesProvider;
+        this.domUtils = domUtils;
+        this.settingsHelper = settingsHelper;
+        this.sites = [];
+        this.sitesLoaded = false;
+        this.currentSiteId = '';
+        this.syncOnlyOnWifi = false;
+        this.isDestroyed = false;
+        this.currentSiteId = this.sitesProvider.getCurrentSiteId();
+        this.sitesObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function (data) {
+            _this.sitesProvider.getSite(data.siteId).then(function (site) {
+                var siteInfo = site.getInfo();
+                var siteEntry = _this.sites.find(function (siteEntry) { return siteEntry.id == site.id; });
+                if (siteEntry) {
+                    siteEntry.siteUrl = siteInfo.siteurl;
+                    siteEntry.siteName = siteInfo.sitename;
+                    siteEntry.fullName = siteInfo.fullname;
+                }
+            });
+        });
     }
-    CoreSiteHomeIndexPage = __decorate([
+    /**
+     * View loaded.
+     */
+    CoreSettingsSynchronizationPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.sitesProvider.getSortedSites().then(function (sites) {
+            _this.sites = sites;
+        }).finally(function () {
+            _this.sitesLoaded = true;
+        });
+        this.configProvider.get(__WEBPACK_IMPORTED_MODULE_1__core_constants__["a" /* CoreConstants */].SETTINGS_SYNC_ONLY_ON_WIFI, true).then(function (syncOnlyOnWifi) {
+            _this.syncOnlyOnWifi = !!syncOnlyOnWifi;
+        });
+    };
+    /**
+     * Called when sync only on wifi setting is enabled or disabled.
+     */
+    CoreSettingsSynchronizationPage.prototype.syncOnlyOnWifiChanged = function () {
+        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_1__core_constants__["a" /* CoreConstants */].SETTINGS_SYNC_ONLY_ON_WIFI, this.syncOnlyOnWifi ? 1 : 0);
+    };
+    /**
+     * Syncrhonizes a site.
+     *
+     * @param {string} siteId Site ID.
+     */
+    CoreSettingsSynchronizationPage.prototype.synchronize = function (siteId) {
+        var _this = this;
+        this.settingsHelper.synchronizeSite(this.syncOnlyOnWifi, siteId).catch(function (error) {
+            if (_this.isDestroyed) {
+                return;
+            }
+            _this.domUtils.showErrorModalDefault(error, 'core.settings.errorsyncsite', true);
+        });
+    };
+    /**
+     * Returns true if site is beeing synchronized.
+     *
+     * @param {string} siteId Site ID.
+     * @return {boolean} True if site is beeing synchronized, false otherwise.
+     */
+    CoreSettingsSynchronizationPage.prototype.isSynchronizing = function (siteId) {
+        return !!this.settingsHelper.getSiteSyncPromise(siteId);
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreSettingsSynchronizationPage.prototype.ngOnDestroy = function () {
+        this.isDestroyed = true;
+        this.sitesObserver && this.sitesObserver.off();
+    };
+    CoreSettingsSynchronizationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-sitehome-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/sitehome/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.sitehome.sitehome\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-sitehome-index></core-sitehome-index>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/sitehome/pages/index/index.html"*/,
+            selector: 'page-core-settings-synchronization',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/synchronization/synchronization.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.synchronization\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="sitesLoaded">\n        <ion-item-divider color="light">\n            <p>{{ \'core.settings.syncsettings\' | translate }}</p>\n        </ion-item-divider>\n        <ion-item>\n            <ion-label>{{ \'core.settings.enablesyncwifi\' | translate }}</ion-label>\n            <ion-toggle item-end [(ngModel)]="syncOnlyOnWifi" (ngModelChange)="syncOnlyOnWifiChanged()">\n            </ion-toggle>\n        </ion-item>\n        <ion-item-divider color="light">\n            <p>{{ \'core.settings.sites\' | translate }}</p>\n        </ion-item-divider>\n        <ion-item *ngFor="let site of sites" [class.core-primary-item]="site.id == currentSiteId">\n            <h2><core-format-text [text]="site.siteName"></core-format-text></h2>\n            <p>{{ site.fullName }}</p>\n            <p>{{ site.siteUrl }}</p>\n            <button ion-button icon-only clear item-end *ngIf="!isSynchronizing(site.id)" (click)="synchronize(site.id)" [title]="site.siteName" [attr.aria-label]="\'core.settings.synchronizenow\' | translate">\n                <ion-icon name="sync"></ion-icon>\n            </button>\n            <ion-spinner item-end *ngIf="isSynchronizing(site.id)"></ion-spinner>\n        </ion-item>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/synchronization/synchronization.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */]])
-    ], CoreSiteHomeIndexPage);
-    return CoreSiteHomeIndexPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__core_settings_providers_helper__["a" /* CoreSettingsHelper */]])
+    ], CoreSettingsSynchronizationPage);
+    return CoreSettingsSynchronizationPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=synchronization.js.map
 
 /***/ })
 

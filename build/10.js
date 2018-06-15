@@ -1,16 +1,16 @@
 webpackJsonp([10],{
 
-/***/ 1833:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreViewerImagePageModule", function() { return CoreViewerImagePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreUserParticipantsPageModule", function() { return CoreUserParticipantsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__image__ = __webpack_require__(1952);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__participants__ = __webpack_require__(2005);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,36 +35,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreViewerImagePageModule = (function () {
-    function CoreViewerImagePageModule() {
+var CoreUserParticipantsPageModule = /** @class */ (function () {
+    function CoreUserParticipantsPageModule() {
     }
-    CoreViewerImagePageModule = __decorate([
+    CoreUserParticipantsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__image__["a" /* CoreViewerImagePage */]
+                __WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__image__["a" /* CoreViewerImagePage */]),
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreUserComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ]
+            ],
         })
-    ], CoreViewerImagePageModule);
-    return CoreViewerImagePageModule;
+    ], CoreUserParticipantsPageModule);
+    return CoreUserParticipantsPageModule;
 }());
 
-//# sourceMappingURL=image.module.js.map
+//# sourceMappingURL=participants.module.js.map
 
 /***/ }),
 
-/***/ 1952:
+/***/ 2005:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreViewerImagePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreUserParticipantsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -89,34 +88,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 /**
- * Page to view an image. If opened as a modal, it will have a button to close the modal.
+ * Page that displays the list of course participants.
  */
-var CoreViewerImagePage = (function () {
-    function CoreViewerImagePage(viewCtrl, params, translate) {
-        this.viewCtrl = viewCtrl;
-        this.title = params.get('title') || translate.instant('core.imageviewer');
-        this.image = params.get('image');
-        this.component = params.get('component');
-        this.componentId = params.get('componentId');
+var CoreUserParticipantsPage = /** @class */ (function () {
+    function CoreUserParticipantsPage(navParams) {
+        this.courseId = navParams.get('courseId');
     }
-    /**
-     * Close modal.
-     */
-    CoreViewerImagePage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
-    };
-    CoreViewerImagePage = __decorate([
+    CoreUserParticipantsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-viewer-image',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/viewer/pages/image/image.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <img [src]="image" alt="{{ title }}" core-external-content [component]="component" [componentId]="componentId">\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/viewer/pages/image/image.html"*/,
+            selector: 'page-core-user-participants',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/user/pages/participants/participants.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.user.participants\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-user-participants [courseId]="courseId"></core-user-participants>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/user/pages/participants/participants.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["z" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
-    ], CoreViewerImagePage);
-    return CoreViewerImagePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */]])
+    ], CoreUserParticipantsPage);
+    return CoreUserParticipantsPage;
 }());
 
-//# sourceMappingURL=image.js.map
+//# sourceMappingURL=participants.js.map
 
 /***/ })
 

@@ -1,17 +1,17 @@
 webpackJsonp([74],{
 
-/***/ 1765:
+/***/ 1812:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModGlossaryIndexPageModule", function() { return AddonModGlossaryIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModLessonIndexPageModule", function() { return AddonModLessonIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(898);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1881);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(951);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1932);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +37,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModGlossaryIndexPageModule = (function () {
-    function AddonModGlossaryIndexPageModule() {
+var AddonModLessonIndexPageModule = /** @class */ (function () {
+    function AddonModLessonIndexPageModule() {
     }
-    AddonModGlossaryIndexPageModule = __decorate([
+    AddonModLessonIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModGlossaryIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModLessonIndexPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModGlossaryComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModGlossaryIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModLessonComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModLessonIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModGlossaryIndexPageModule);
-    return AddonModGlossaryIndexPageModule;
+    ], AddonModLessonIndexPageModule);
+    return AddonModLessonIndexPageModule;
 }());
 
 //# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1881:
+/***/ 1932:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModGlossaryIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModLessonIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(411);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,33 +94,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays a glossary.
+ * Page that displays the lesson entry page.
  */
-var AddonModGlossaryIndexPage = (function () {
-    function AddonModGlossaryIndexPage(navParams) {
+var AddonModLessonIndexPage = /** @class */ (function () {
+    function AddonModLessonIndexPage(navParams) {
         this.module = navParams.get('module') || {};
         this.courseId = navParams.get('courseId');
+        this.group = navParams.get('group');
+        this.action = navParams.get('action');
         this.title = this.module.name;
     }
     /**
-     * Update some data based on the glossary instance.
+     * Update some data based on the lesson instance.
      *
-     * @param {any} glossary Glossary instance.
+     * @param {any} lesson Lesson instance.
      */
-    AddonModGlossaryIndexPage.prototype.updateData = function (glossary) {
-        this.title = glossary.name || this.title;
+    AddonModLessonIndexPage.prototype.updateData = function (lesson) {
+        this.title = lesson.name || this.title;
+    };
+    /**
+     * User entered the page.
+     */
+    AddonModLessonIndexPage.prototype.ionViewDidEnter = function () {
+        this.lessonComponent.ionViewDidEnter();
+    };
+    /**
+     * User left the page.
+     */
+    AddonModLessonIndexPage.prototype.ionViewDidLeave = function () {
+        this.lessonComponent.ionViewDidLeave();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModGlossaryIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModGlossaryIndexComponent */])
-    ], AddonModGlossaryIndexPage.prototype, "glossaryComponent", void 0);
-    AddonModGlossaryIndexPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModLessonIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModLessonIndexComponent */])
+    ], AddonModLessonIndexPage.prototype, "lessonComponent", void 0);
+    AddonModLessonIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-glossary-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/glossary/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<addon-mod-glossary-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-glossary-index>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/glossary/pages/index/index.html"*/,
+            selector: 'page-addon-mod-lesson-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/lesson/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="lessonComponent.loaded" (ionRefresh)="lessonComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-lesson-index [module]="module" [courseId]="courseId" [group]="group" [action]="action" (dataRetrieved)="updateData($event)"></addon-mod-lesson-index>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/lesson/pages/index/index.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */]])
-    ], AddonModGlossaryIndexPage);
-    return AddonModGlossaryIndexPage;
+    ], AddonModLessonIndexPage);
+    return AddonModLessonIndexPage;
 }());
 
 //# sourceMappingURL=index.js.map

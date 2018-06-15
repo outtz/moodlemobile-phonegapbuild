@@ -1,16 +1,16 @@
 webpackJsonp([13],{
 
-/***/ 1830:
+/***/ 1878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreUserParticipantsPageModule", function() { return CoreUserParticipantsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSitePluginsModuleIndexPageModule", function() { return CoreSitePluginsModuleIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__participants__ = __webpack_require__(1949);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__module_index__ = __webpack_require__(2002);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(937);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,35 +35,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreUserParticipantsPageModule = (function () {
-    function CoreUserParticipantsPageModule() {
+/**
+ * Module to lazy load the page.
+ */
+var CoreSitePluginsModuleIndexPageModule = /** @class */ (function () {
+    function CoreSitePluginsModuleIndexPageModule() {
     }
-    CoreUserParticipantsPageModule = __decorate([
+    CoreSitePluginsModuleIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__module_index__["a" /* CoreSitePluginsModuleIndexPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreUserComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreSitePluginsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__module_index__["a" /* CoreSitePluginsModuleIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+            ]
         })
-    ], CoreUserParticipantsPageModule);
-    return CoreUserParticipantsPageModule;
+    ], CoreSitePluginsModuleIndexPageModule);
+    return CoreSitePluginsModuleIndexPageModule;
 }());
 
-//# sourceMappingURL=participants.module.js.map
+//# sourceMappingURL=module-index.module.js.map
 
 /***/ }),
 
-/***/ 1949:
+/***/ 2002:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreUserParticipantsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSitePluginsModuleIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__ = __webpack_require__(254);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,23 +92,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Page that displays the list of course participants.
+ * Page to render the index page of a module site plugin.
  */
-var CoreUserParticipantsPage = (function () {
-    function CoreUserParticipantsPage(navParams) {
-        this.courseId = navParams.get('courseId');
+var CoreSitePluginsModuleIndexPage = /** @class */ (function () {
+    function CoreSitePluginsModuleIndexPage(params) {
+        this.title = params.get('title');
+        this.module = params.get('module');
+        this.courseId = params.get('courseId');
     }
-    CoreUserParticipantsPage = __decorate([
+    /**
+     * Refresh the data.
+     *
+     * @param {any} refresher Refresher.
+     */
+    CoreSitePluginsModuleIndexPage.prototype.refreshData = function (refresher) {
+        this.content.doRefresh().finally(function () {
+            refresher.complete();
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__["a" /* CoreSitePluginsModuleIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__["a" /* CoreSitePluginsModuleIndexComponent */])
+    ], CoreSitePluginsModuleIndexPage.prototype, "content", void 0);
+    CoreSitePluginsModuleIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-user-participants',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/user/pages/participants/participants.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.user.participants\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-user-participants [courseId]="courseId"></core-user-participants>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/user/pages/participants/participants.html"*/,
+            selector: 'page-core-site-plugins-module-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/siteplugins/pages/module-index/module-index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n\n        <ion-buttons end>\n            <!-- If the site plugin defines some buttons using core-nav-buttons, they will be added here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="content && content.content && content.content.dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-site-plugins-module-index [module]="module" [courseId]="courseId"></core-site-plugins-module-index>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/siteplugins/pages/module-index/module-index.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */]])
-    ], CoreUserParticipantsPage);
-    return CoreUserParticipantsPage;
+    ], CoreSitePluginsModuleIndexPage);
+    return CoreSitePluginsModuleIndexPage;
 }());
 
-//# sourceMappingURL=participants.js.map
+//# sourceMappingURL=module-index.js.map
 
 /***/ })
 

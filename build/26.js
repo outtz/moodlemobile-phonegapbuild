@@ -1,16 +1,17 @@
 webpackJsonp([26],{
 
-/***/ 1816:
+/***/ 1865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitePolicyPageModule", function() { return CoreLoginSitePolicyPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu__ = __webpack_require__(1935);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_policy__ = __webpack_require__(1989);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,38 +36,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreMainMenuPageModule = (function () {
-    function CoreMainMenuPageModule() {
+
+var CoreLoginSitePolicyPageModule = /** @class */ (function () {
+    function CoreLoginSitePolicyPageModule() {
     }
-    CoreMainMenuPageModule = __decorate([
+    CoreLoginSitePolicyPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__menu__["a" /* CoreMainMenuPage */],
+                __WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__menu__["a" /* CoreMainMenuPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreMainMenuPageModule);
-    return CoreMainMenuPageModule;
+    ], CoreLoginSitePolicyPageModule);
+    return CoreLoginSitePolicyPageModule;
 }());
 
-//# sourceMappingURL=menu.module.js.map
+//# sourceMappingURL=site-policy.module.js.map
 
 /***/ }),
 
-/***/ 1935:
+/***/ 1989:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitePolicyPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(880);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_helper__ = __webpack_require__(77);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,96 +99,107 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays the main menu of the app.
+ * Page to accept a site policy.
  */
-var CoreMainMenuPage = (function () {
-    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl) {
-        this.menuDelegate = menuDelegate;
-        this.sitesProvider = sitesProvider;
+var CoreLoginSitePolicyPage = /** @class */ (function () {
+    function CoreLoginSitePolicyPage(navCtrl, navParams, loginHelper, domUtils, sitesProvider, utils, mimeUtils) {
         this.navCtrl = navCtrl;
-        this.tabs = [];
-        this.loaded = false;
-        this.showTabs = false;
-        this.redirectPageLoaded = false;
-        this.redirectPage = navParams.get('redirectPage');
-        this.redirectParams = navParams.get('redirectParams');
+        this.loginHelper = loginHelper;
+        this.domUtils = domUtils;
+        this.sitesProvider = sitesProvider;
+        this.utils = utils;
+        this.mimeUtils = mimeUtils;
+        this.siteId = navParams.get('siteId');
     }
     /**
-     * View loaded.
+     * View laoded.
      */
-    CoreMainMenuPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        if (!this.sitesProvider.isLoggedIn()) {
-            this.navCtrl.setRoot('CoreLoginInitPage');
+    CoreLoginSitePolicyPage.prototype.ionViewDidLoad = function () {
+        this.currentSite = this.sitesProvider.getCurrentSite();
+        if (!this.currentSite) {
+            // Not logged in, stop.
+            this.cancel();
             return;
         }
-        this.showTabs = true;
-        var site = this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
-        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            handlers = handlers.slice(0, __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
-            // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
-            var newTabs = [];
-            var _loop_1 = function (i) {
-                var handler = handlers[i];
-                // Check if the handler is already in the tabs list. If so, use it.
-                var tab = _this.tabs.find(function (tab) {
-                    return tab.title == handler.title && tab.icon == handler.icon;
-                });
-                newTabs.push(tab || handler);
-            };
-            for (var i = 0; i < handlers.length; i++) {
-                _loop_1(i);
-            }
-            _this.tabs = newTabs;
-            // Sort them by priority so new handlers are in the right position.
-            _this.tabs.sort(function (a, b) {
-                return b.priority - a.priority;
+        var currentSiteId = this.currentSite.id;
+        this.siteId = this.siteId || currentSiteId;
+        if (this.siteId != currentSiteId || !this.currentSite.wsAvailable('core_user_agree_site_policy')) {
+            // Not current site or WS not available, stop.
+            this.cancel();
+            return;
+        }
+        this.fetchSitePolicy();
+    };
+    /**
+     * Fetch the site policy URL.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreLoginSitePolicyPage.prototype.fetchSitePolicy = function () {
+        var _this = this;
+        return this.loginHelper.getSitePolicy(this.siteId).then(function (sitePolicy) {
+            _this.sitePolicy = sitePolicy;
+            // Try to get the mime type.
+            return _this.utils.getMimeTypeFromUrl(sitePolicy).then(function (mimeType) {
+                var extension = _this.mimeUtils.getExtension(mimeType, sitePolicy);
+                _this.showInline = extension == 'html' || extension == 'htm';
+            }).catch(function () {
+                // Unable to get mime type, assume it's not supported.
+                _this.showInline = false;
+            }).finally(function () {
+                _this.policyLoaded = true;
             });
-            if (typeof _this.initialTab == 'undefined' && !_this.loaded) {
-                // Calculate the tab to load.
-                if (_this.redirectPage) {
-                    // Check if the redirect page is the root page of any of the tabs.
-                    _this.initialTab = 0;
-                    for (var i = 0; i < _this.tabs.length; i++) {
-                        if (_this.tabs[i].page == _this.redirectPage) {
-                            _this.initialTab = i + 1;
-                            break;
-                        }
-                    }
-                }
-                else {
-                    // By default, course overview will be loaded (3.3+). Check if we need to select Site Home or My Courses.
-                    for (var i = 0; i < _this.tabs.length; i++) {
-                        var handler = handlers[i];
-                        if ((displaySiteHome && handler.name == 'CoreSiteHome') ||
-                            (!displaySiteHome && handler.name == 'CoreCourses')) {
-                            _this.initialTab = i;
-                            break;
-                        }
-                    }
-                }
-            }
-            _this.loaded = _this.menuDelegate.areHandlersLoaded();
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error && error.error, 'Error getting site policy.');
+            _this.cancel();
         });
     };
     /**
-     * Page destroyed.
+     * Cancel.
      */
-    CoreMainMenuPage.prototype.ngOnDestroy = function () {
-        this.subscription && this.subscription.unsubscribe();
+    CoreLoginSitePolicyPage.prototype.cancel = function () {
+        var _this = this;
+        this.sitesProvider.logout().catch(function () {
+            // Ignore errors, shouldn't happen.
+        }).then(function () {
+            _this.navCtrl.setRoot('CoreLoginSitesPage');
+        });
     };
-    CoreMainMenuPage = __decorate([
+    /**
+     * Accept the site policy.
+     */
+    CoreLoginSitePolicyPage.prototype.accept = function () {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.sending', true);
+        this.loginHelper.acceptSitePolicy(this.siteId).then(function () {
+            // Success accepting, go to site initial page.
+            // Invalidate cache since some WS don't return error if site policy is not accepted.
+            return _this.currentSite.invalidateWsCache().catch(function () {
+                // Ignore errors.
+            }).then(function () {
+                return _this.loginHelper.goToSiteInitialPage();
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error.message, 'Error accepting site policy.');
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    CoreLoginSitePolicyPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<core-ion-tabs #mainTabs [hidden]="!showTabs" [loaded]="loaded" [selectedIndex]="initialTab" [selectedDisabled]="!!redirectPage" tabsPlacement="bottom" tabsLayout="title-hide">\n    <core-ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></core-ion-tab>\n    <core-ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></core-ion-tab>\n    <core-ion-tab root="CoreMainMenuMorePage" [tabTitle]="\'core.more\' | translate" tabIcon="more"></core-ion-tab>\n</core-ion-tabs>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
+            selector: 'page-core-login-site-policy',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.policyagreement\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="policyLoaded">\n        <ion-list>\n            <ion-item text-wrap>\n                {{ \'core.login.policyagree\' | translate }}\n            </ion-item>\n            <ion-item text-wrap>\n                <p><a [href]="sitePolicy" core-link [capture]="false">{{ \'core.login.policyagreementclick\' | translate }}</a></p>\n            </ion-item>\n            <ion-card *ngIf="showInline">\n                <core-iframe [src]="sitePolicy"></core-iframe>\n            </ion-card>\n            <ion-item text-wrap padding>\n                <button ion-button block color="primary" (click)="accept()">{{ \'core.login.policyaccept\' | translate }}</button>\n                <button ion-button block (click)="cancel()">{{ \'core.login.cancel\' | translate }}</button>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */]])
-    ], CoreMainMenuPage);
-    return CoreMainMenuPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__providers_helper__["a" /* CoreLoginHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__["a" /* CoreUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__["a" /* CoreMimetypeUtilsProvider */]])
+    ], CoreLoginSitePolicyPage);
+    return CoreLoginSitePolicyPage;
 }());
 
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=site-policy.js.map
 
 /***/ })
 
