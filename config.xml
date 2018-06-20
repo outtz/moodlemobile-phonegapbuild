@@ -5,10 +5,11 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "20230"
         version   = "3.4.2">
-    <name>Moodle Mobile</name>
+    <name>OUTLeMS</name>
 
     <description>
-        Moodle Mobile official app
+        OUTLeMS official app for The Open University of Tanzania
+
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
