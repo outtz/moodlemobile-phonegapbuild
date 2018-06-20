@@ -5,10 +5,8 @@
         id        = "com.out.outlems"
         versionCode = "2023"
         version   = "3.4.2">
-    <name>OUTLeMS</name>
-	
-   <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-   
+	<framework src="com.android.support:support-v4:27+" />
+    <name>OUTLeMS</name> 
     <description>
         OUTLeMS official app for The Open University of Tanzania
 
