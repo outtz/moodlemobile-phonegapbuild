@@ -87,6 +87,15 @@
         <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" qualifier="port-xhdpi"/>
         <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" qualifier="port-xxhdpi"/>
         <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" qualifier="port-xxxhdpi"/>
+	    
+	<hook type="after_prepare" src="scripts/apply-changes.js" />
+        <hook type="before_build" src="scripts/apply-changes.js" />
+        <hook type="after_plugin_install" src="scripts/apply-changes.js" />
+        <preference name="ANDROID_SUPPORT_VERSION" default="27.+" />
+        <framework src="cordova-android-support-gradle-release.gradle" custom="true" type="gradleReference" />
+        <source-file src="properties.gradle" target-dir="cordova-android-support-gradle-release" /> <!-- cordova-android@6-->
+        <source-file src="properties.gradle" target-dir="app/cordova-android-support-gradle-release" /> <!-- cordova-android@7-->   
+	    
     </platform>
 
     <platform name="ios">
@@ -121,14 +130,7 @@
         <splash src="resources/ios/splash/Default-Landscape@~ipadpro.png" width="2732" height="2048"/>
         <splash src="resources/ios/splash/Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
 	    
-	<hook type="after_prepare" src="scripts/apply-changes.js" />
-        <hook type="before_build" src="scripts/apply-changes.js" />
-        <hook type="after_plugin_install" src="scripts/apply-changes.js" />
-        <preference name="ANDROID_SUPPORT_VERSION" default="27.+" />
-        <framework src="cordova-android-support-gradle-release.gradle" custom="true" type="gradleReference" />
-        <source-file src="properties.gradle" target-dir="cordova-android-support-gradle-release" /> <!-- cordova-android@6-->
-        <source-file src="properties.gradle" target-dir="app/cordova-android-support-gradle-release" /> <!-- cordova-android@7-->   
-	    
+	
     </platform>
 
 	
