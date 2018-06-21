@@ -64,7 +64,7 @@
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
 	
-	<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+	<plugin xmlns:gap="http://www.phonegap.com/ns/plugins/1.0"
                xmlns:android="http://schemas.android.com/apk/res/android"
                id="cordova-android-support-gradle-release"
                version="1.4.4">
