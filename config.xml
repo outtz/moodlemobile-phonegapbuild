@@ -63,6 +63,16 @@
 
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
+	
+	<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+               xmlns:android="http://schemas.android.com/apk/res/android"
+               id="cordova-android-support-gradle-release"
+               version="1.4.4">
+	
+    <engines>
+        <engine name="cordova" version=">=6.2.0" />
+        <engine name="cordova-android" version=">=6.0.0" />
+    </engines>
 
     <platform name="android">
         <icon src="resources/android/icon/drawable-ldpi-icon.png" qualifier="ldpi"/>
@@ -116,6 +126,15 @@
         <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
         <splash src="resources/ios/splash/Default-Landscape@~ipadpro.png" width="2732" height="2048"/>
         <splash src="resources/ios/splash/Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
+	    
+	<hook type="after_prepare" src="scripts/apply-changes.js" />
+        <hook type="before_build" src="scripts/apply-changes.js" />
+        <hook type="after_plugin_install" src="scripts/apply-changes.js" />
+        <preference name="ANDROID_SUPPORT_VERSION" default="27.+" />
+        <framework src="cordova-android-support-gradle-release.gradle" custom="true" type="gradleReference" />
+        <source-file src="properties.gradle" target-dir="cordova-android-support-gradle-release" /> <!-- cordova-android@6-->
+        <source-file src="properties.gradle" target-dir="app/cordova-android-support-gradle-release" /> <!-- cordova-android@7-->   
+	    
     </platform>
 
 	
@@ -152,9 +171,9 @@
     <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
 	
-    <gap:plugin name="cordova-android-support-gradle-release" source="npm" >
-        <variable name = "ANDROID_SUPPORT_VERSION=27.1.0"  /> 
-    </gap:plugin>
+	
+	
+   
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
