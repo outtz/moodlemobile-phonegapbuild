@@ -162,6 +162,14 @@
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
     </gap:config-file>
+	
+   <gap:plugin name="cordova-android-support-gradle-release" source="npm" >
+        <variable name = "ANDROID_SUPPORT_VERSION" value = "27.1.0" /> 
+    </gap:plugin>
+	
+    <gap:plugin name="cordova-android-support-gradle-release" source="npm" >
+        <variable name = "ANDROID_SUPPORT_VERSION=27.1.0"  /> 
+    </gap:plugin>
 
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
