@@ -69,10 +69,7 @@
                id="cordova-android-support-gradle-release"
                version="1.4.4">
 	
-    <engines>
-        <engine name="cordova" version=">=6.2.0" />
-        <engine name="cordova-android" version=">=6.0.0" />
-    </engines>
+ 
 
     <platform name="android">
         <icon src="resources/android/icon/drawable-ldpi-icon.png" qualifier="ldpi"/>
